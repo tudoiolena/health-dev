@@ -66,8 +66,48 @@
         ]
       }
     },
-    "top_sellers_tDneXc": {
+    "top_sellers_Lajqhi": {
       "type": "top-sellers",
+      "blocks": {
+        "product_63xBVw": {
+          "type": "product",
+          "settings": {
+            "selected_product": "creatine-monohydrate",
+            "background_color": "#f0f8fc",
+            "text_color": "#42abde"
+          }
+        },
+        "product_Xb6aCN": {
+          "type": "product",
+          "settings": {
+            "selected_product": "mass-gainer",
+            "background_color": "#fdf2f2",
+            "text_color": "#e35f5e"
+          }
+        },
+        "product_k7QVMi": {
+          "type": "product",
+          "settings": {
+            "selected_product": "plant-protein",
+            "background_color": "#f2f9f5",
+            "text_color": "#5bb984"
+          }
+        },
+        "product_KXMcK7": {
+          "type": "product",
+          "settings": {
+            "selected_product": "whey-protein",
+            "background_color": "#f0f8fc",
+            "text_color": "#42abde"
+          }
+        }
+      },
+      "block_order": [
+        "product_63xBVw",
+        "product_Xb6aCN",
+        "product_k7QVMi",
+        "product_KXMcK7"
+      ],
       "settings": {
       }
     }
@@ -76,6 +116,6 @@
     "main",
     "hero_tqCbmw",
     "collections_slider_R7BhqQ",
-    "top_sellers_tDneXc"
+    "top_sellers_Lajqhi"
   ]
 }

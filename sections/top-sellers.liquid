@@ -42,7 +42,7 @@
 
   .top-seller-product-title {
     color: rgba(66, 171, 222, 1);
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
     font-size: 32px;
     font-weight: 600;
     line-height: 48px;
@@ -61,13 +61,14 @@
     padding-right: 30px;
   }
 
-  .top-seller-product-text {
+  .top-seller-product-text,
+  .top-seller-product-text span {
     font-family: Karla, sans-serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
     text-align: left;
-    color: rgba(66, 171, 222, 1);
+    color: inherit;
   }
 
   .card-container {
@@ -87,7 +88,7 @@
     display: none;
   }
 
-  @media screen and (min-width: 428px) {
+  @media screen and (max-width: 428px) {
     .top-seller-product-title {
       font-size: 18px;
       line-height: 27px;
@@ -113,7 +114,6 @@
       font-size: 15px;
       font-weight: 400;
       line-height: 24px;
-      max-width: 355px;
     }
   }
 
@@ -144,52 +144,75 @@
 
 <section class="top-seller-section">
   <div class="top-seller-text-container">
-    <h3 class="top-seller-title">Discover our top sellers</h3>
+    <h3 class="top-seller-title">{{ section.settings.title_text }}</h3>
     <p class="top-seller-text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan
-      quam.
+      {{ section.settings.subtitle_text }}
     </p>
   </div>
   <div class="card-container">
-    {%
-      render 'top-seller-product-card.liquid' with {
-      productTitle: 'CREATINE MONOHYDRATE',
-      productLink: 'https://example.com',
-      productDescription: 'Creatine Monohydrate is widely used for enhancing muscle strength.',
-      productImage: 'creatine-flat-can.png',
-      arrowImage: 'arrow-right-corner.png'
-      }
-    %}
+    {% assign has_selected_products = false %}
 
-    {%
-      render 'top-seller-product-card.liquid' with {
-      productTitle: 'CREATINE MONOHYDRATE',
-      productLink: 'https://example.com',
-      productDescription: 'Creatine Monohydrate is widely used for enhancing muscle strength.',
-      productImage: 'creatine-flat-can.png',
-      arrowImage: 'arrow-right-corner.png'
-      }
-    %}
+    {% for product_block in section.blocks %}
+      {% if product_block.settings.selected_product %}
+        {% assign has_selected_products = true %}
+        {% assign product = all_products[product_block.settings.selected_product] %}
 
-    {%
-      render 'top-seller-product-card.liquid' with {
-      productTitle: 'CREATINE MONOHYDRATE',
-      productLink: 'https://example.com',
-      productDescription: 'Creatine Monohydrate is widely used for enhancing muscle strength.',
-      productImage: 'creatine-flat-can.png',
-      arrowImage: 'arrow-right-corner.png'
-      }
-    %}
+        <div
+          class="top-seller-card"
+          style="background-color: {{ product_block.settings.background_color }};"
+        >
+          <div class="top-seller-content">
+            <div class="top-seller-title-container">
+              <p class="top-seller-product-title" style="color: {{ product_block.settings.text_color }}">
+                {% if product %}
+                  {{ product.title | upcase }}
+                {% endif %}
+              </p>
 
-    {%
-      render 'top-seller-product-card.liquid' with {
-      productTitle: 'CREATINE MONOHYDRATE',
-      productLink: 'https://example.com',
-      productDescription: 'Creatine Monohydrate is widely used for enhancing muscle strength.',
-      productImage: 'creatine-flat-can.png',
-      arrowImage: 'arrow-right-corner.png'
-      }
-    %}
+              <a
+                href="{% if product %}{{ product.url }}{% endif %}"
+              >
+                <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="35.3553" width="50" height="50" rx="25" transform="rotate(-45 0 35.3553)" fill="white"/>
+                  <path d="M28.356 42.3549L42.356 28.3549M42.356 28.3549H33.0226M42.356 28.3549V37.6883" stroke="{{ product_block.settings.text_color }}" stroke-width="1.5"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="top-seller-product-text" style="color: {{ product_block.settings.text_color }} ">
+              {% if product %}
+                {{ product.description }}
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="top-seller-image">
+            {% if product %}
+              <img src="{{product.featured_image | image_url}}" alt="{{ product.title }}" width="100%" height="100%">
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    {% unless has_selected_products %}
+      {%
+        render 'top-seller-product-card' with {
+        productTitle: 'CREATINE MONOHYDRATE',
+        productLink: 'https://example.com',
+        productDescription: 'Creatine Monohydrate is a popular dietary supplement widely used in fitness circles, known for enhancing muscle strength, improving exercise performance, and supporting muscle recovery.',
+        productImage: 'creatine-flat-can.png'
+        }
+      %}
+      {%
+        render 'top-seller-product-card' with {
+        productTitle: 'MASS GAINER',
+        productLink: 'https://example.com',
+        productDescription: 'Mass Gainer is a calorie-dense supplement designed to support muscle mass and weight gain.',
+        productImage: 'mass-gainer.png'
+        }
+      %}
+    {% endunless %}
   </div>
 
   <div id="top-seller-swiper" class="swiper-container align-center">
@@ -230,7 +253,9 @@
         nextEl: '.arrow-right',
         prevEl: '.arrow-left',
       },
-     autoplay: false
+      autoplay: {
+        delay: 3000,
+      },
       pagination: false,
     });
   });
@@ -238,12 +263,66 @@
 
 {% schema %}
 {
-  "name": "Top Seller",
-  "settings": [],
-  "blocks": [],
+  "name": "Top Seller Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title_text",
+      "label": "Title",
+      "default": "Discover our top sellers"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle_text",
+      "label": "Subtitle",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsanquam."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "selected_product",
+          "label": "Select a product"
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Card Background Color"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Card Text Color"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Top Seller"
+      "name": "Top Sellers",
+      "category": "Products",
+      "blocks": [
+        {
+          "type": "product",
+          "settings": {
+            "selected_product": "",
+            "background_color": "rgba(66, 171, 222, 0.08)",
+            "text_color": "rgba(66, 171, 222, 1)"
+          }
+        },
+        {
+          "type": "product",
+          "settings": {
+            "selected_product": "",
+            "background_color": "rgba(227, 95, 94, 0.08)",
+            "text_color": "rgba(227, 95, 94, 1)"
+          }
+        }
+      ]
     }
   ]
 }
