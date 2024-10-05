@@ -1,145 +1,172 @@
 <style>
-  .top-seller-text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .top-seller-title {
-    font-family: Montserrat, sans-serif;
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 60px;
-    color: rgba(35, 31, 32, 1);
-    margin-bottom: 15px;
-  }
-
-  .top-seller-text {
-    font-family: Karla, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: center;
-    color: rgba(128, 128, 128, 1);
-    max-width: 508px;
-    margin-bottom: 35px;
-  }
-
-  .top-seller-card {
-    width: 695px;
-    background-color: rgba(66, 171, 222, 0.08);
-    border-radius: 12px;
-  }
-
-  .top-seller-title-container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    margin: 15px 0;
-  }
-
-  .top-seller-product-title {
-    color: rgba(66, 171, 222, 1);
-    font-family: Montserrat, sans-serif;
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 48px;
-  }
-
-  .top-seller-image {
-    max-height: 800px;
-  }
-
-  .arrow-container {
-    width: 50px;
-  }
-
-  .top-seller-content {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  .top-seller-product-text,
-  .top-seller-product-text span {
-    font-family: Karla, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: left;
-    color: inherit;
-  }
-
-  .card-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-    max-width: 1400px;
-  }
-
-  .top-seller-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #top-seller-swiper {
-    display: none;
-  }
-
-  @media screen and (max-width: 428px) {
-    .top-seller-product-title {
-      font-size: 18px;
-      line-height: 27px;
-    }
-
-    .top-seller-title-container {
-      padding-top: 20px;
-      margin: 0 0 15px 0;
-    }
-
-    .top-seller-content {
-      padding: 0 10px;
+    .top-seller-text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .top-seller-title {
-      font-size: 24px;
+      font-family: Montserrat, sans-serif;
+      font-size: 40px;
       font-weight: 500;
-      line-height: 36px;
-      text-align: center;
+      line-height: 60px;
+      color: rgba(35, 31, 32, 1);
+      margin-bottom: 15px;
     }
 
     .top-seller-text {
+      font-family: Karla, sans-serif;
       font-size: 15px;
       font-weight: 400;
       line-height: 24px;
+      text-align: center;
+      color: rgba(128, 128, 128, 1);
+      max-width: 508px;
+      margin-bottom: 35px;
     }
-  }
 
-  @media screen and (max-width: 768px) {
     .top-seller-card {
-      max-width: 355px;
+      width: 695px;
+      background-color: rgba(66, 171, 222, 0.08);
+      border-radius: 12px;
     }
 
-    #top-seller-swiper {
+    .top-seller-title-container {
       display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      margin: 15px 0;
+    }
+
+    .top-seller-product-title {
+      color: rgba(66, 171, 222, 1);
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 48px;
+    }
+
+    .top-seller-image {
+      max-height: 800px;
+    }
+
+    .arrow-container {
+      width: 50px;
+    }
+
+    .top-seller-content {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .top-seller-product-text,
+    .top-seller-product-text span {
+      font-family: Karla, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: inherit;
     }
 
     .card-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+      max-width: 1400px;
+    }
+
+    .top-seller-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    {% comment %} #top-seller-swiper {
       display: none;
-    }
+    } {% endcomment %}
 
-    .top-seller-title {
-      font-size: 32px;
-      line-height: 48px;
-      text-align: center;
-    }
+    .top-seller-arrow-left,
+    .top-seller-arrow-right {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
 
-    .top-seller-text {
-      max-width: 508px;
-    }
+
   }
+
+
+
+    @media screen and (max-width: 428px) {
+      .top-seller-product-title {
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      .top-seller-title-container {
+        padding-top: 20px;
+        margin: 0 0 15px 0;
+      }
+
+      .top-seller-content {
+        padding: 0 10px;
+      }
+
+      .top-seller-title {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 36px;
+        text-align: center;
+      }
+
+      .top-seller-text {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+
+
+    }
+
+    @media screen and (max-width: 768px) {
+      .top-seller-card {
+        max-width: 300px;
+      }
+
+      .top-seller-text-container {
+        margin-bottom: 30px;
+      }
+
+      .swiper-container-top-seller {
+        max-height: 385px;
+        width: 96%;
+        margin-bottom:50px;
+      }
+      {% comment %} #top-seller-swiper {
+        display: flex;
+
+      } {% endcomment %}
+
+      .card-container {
+        display: none;
+      }
+
+      .top-seller-title {
+        font-size: 32px;
+        line-height: 48px;
+        text-align: center;
+      }
+
+      .top-seller-text {
+        max-width: 508px;
+      }
+
+      .top-seller-wrapper{
+      margin-top:160px;
+      }
+    }
 </style>
 
 <section class="top-seller-section">
@@ -215,18 +242,33 @@
     {% endunless %}
   </div>
 
-  <div id="top-seller-swiper" class="swiper-container align-center">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        {%
-          render 'top-seller-product-card.liquid' with {
-          productTitle: 'CREATINE MONOHYDRATE',
-          productLink: 'https://example.com',
-          productDescription: 'Creatine Monohydrate is widely used for enhancing muscle strength.',
-          productImage: 'creatine-flat-can.png',
-          arrowImage: 'arrow-right-corner.png'
-          }
-        %}
+  <div id="top-seller-swiper" class="swiper-container swiper-container-top-seller align-center">
+    <div class="swiper-wrapper top-seller-wrapper">
+      <div class="swiper-slide ">
+        <div class="top-seller-card">
+          {%
+            render 'top-seller-product-card' with {
+            productTitle: 'CREATINE MONOHYDRATE',
+            productLink: 'https://example.com',
+            productDescription: 'Creatine Monohydrate is widely used for enhancing muscle strength.',
+            productImage: 'creatine-flat-can.png',
+            arrowImage: 'arrow-right-corner.png'
+            }
+          %}
+        </div>
+      </div>
+      <div class="swiper-slide ">
+        <div class="top-seller-card">
+          {%
+            render 'top-seller-product-card' with {
+            productTitle: 'CREATINE MONOHYDRATE',
+            productLink: 'https://example.com',
+            productDescription: 'Creatine Monohydrate is widely used for enhancing muscle strength.',
+            productImage: 'creatine-flat-can.png',
+            arrowImage: 'arrow-right-corner.png'
+            }
+          %}
+        </div>
       </div>
     </div>
 
@@ -241,20 +283,44 @@
       </div>
     </div>
   </div>
+
+  {% comment %}
+    <div id="top-seller-swiper" class=".swiper-container swiper-container-top-seller align-center">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">111</div>
+        <div class="swiper-slide">222</div>
+      </div>
+
+      <div class="arrow-container">
+        <div class="gap">
+          <div class="top-seller-arrow-left">
+            <img src="{{ 'arrow-left-small.png' | asset_url }}" alt="Previous" width="100%" height="100%">
+          </div>
+          <div class="top-seller-arrow-right">
+            <img src="{{ 'arrow-right-small.png' | asset_url }}" alt="Next" width="100%" height="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endcomment %}
 </section>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const swiper = new Swiper('#top-seller-swiper', {
-      slidesPerView: 1,
+    new Swiper('#top-seller-swiper', {
+      slidesPerView: 1.2,
       spaceBetween: 15,
       loop: true,
       navigation: {
-        nextEl: '.arrow-right',
-        prevEl: '.arrow-left',
+        nextEl: '.top-seller-arrow-right',
+        prevEl: '.top-seller-arrow-left',
       },
-      autoplay: {
+      {% comment %} autoplay: {
         delay: 3000,
+      }, {% endcomment %}
+      autoplay: false,
+      breakpoints: {
+        768: { slidesPerView: 1 },
       },
       pagination: false,
     });
