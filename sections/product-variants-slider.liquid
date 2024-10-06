@@ -1,0 +1,253 @@
+<section id="slider-container">
+  <div class="swiper-container-vertical-wrapper">
+    <div class="swiper-container-vertical">
+      <div class="swiper-scrollbar custom-scrollbar"></div>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide vertical slide">
+          <h3 class="vertical-slider-product-title">The Health Project Ultimate Whey Protein</h3>
+          <p class="vertical-slider-product-weight">2000 g</p>
+          <p class="vertical-slider-product-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae,
+            accumsan quam. In auctor sem nunc, ac iaculis lacus dignissim nec.
+          </p>
+          <a href="#" class="button-small">Buy now</a>
+        </div>
+        <div class="swiper-slide vertical slide">Slide 2</div>
+        <div class="swiper-slide vertical slide">Slide 3</div>
+      </div>
+    </div>
+
+    <div class="vertical-navigation">
+      <div class="vertical-prev">
+        <img src="{{ 'icon-arrow-up.svg' | asset_url }}" alt="Arrow up" width="100%" height="100%">
+      </div>
+      <div class="vertical-next">
+        <img src="{{ 'icon-arrow-down.svg' | asset_url }}" alt="Arrow up" width="100%" height="100%">
+      </div>
+    </div>
+  </div>
+
+  <div class="swiper-container-horizontal">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide horizontal">
+        <img src="{{ 'product-variant.png' | asset_url }}" alt="Product variant" width="100%" height="100%">
+      </div>
+      <div class="swiper-slide horizontal">2</div>
+      <div class="swiper-slide horizontal">3</div>
+    </div>
+    <div class="horizontal-pagination swiper-pagination"></div>
+  </div>
+</section>
+
+<style>
+  #slider-container {
+    max-width: 1990px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .swiper-container-vertical-wrapper {
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .swiper-container-vertical {
+    height: 80%;
+    width: 700px;
+    padding-left: 30px;
+    overflow: auto;
+    position: relative;
+  }
+
+  .vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+  }
+
+  .vertical-slider-product-title {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 60px;
+    text-align: left;
+    color: rgba(35, 31, 32, 1);
+  }
+
+  .vertical-slider-product-weight {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: left;
+    color: rgba(128, 128, 128, 1);
+  }
+
+  .vertical-slider-product-description {
+    font-family: Karla;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(128, 128, 128, 1);
+  }
+
+  #slider-container .button-small {
+    width: 180px;
+  }
+
+  .vertical-prev,
+  .vertical-next {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .vertical-next {
+    bottom: 13px;
+    left: 140px;
+  }
+
+  .vertical-prev {
+    top: 13px;
+    left: 140px;
+  }
+
+  .vertical-next img,
+  .vertical-prev img {
+    cursor: poiner;
+  }
+
+  .swiper-container-horizontal {
+    height: 700px;
+    width: 700px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-container-vertical .swiper-slide {
+    height: 500px;
+  }
+
+  .swiper-container-horizontal .swiper-slide img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-container-horizontal .swiper-slide {
+    background: rgba(248, 248, 248, 1);
+    border-radius: 12px;
+  }
+
+  #slider-container .swiper-scrollbar.swiper-scrollbar-vertical,
+  .swiper-vertical > .swiper-scrollbar {
+    left: 0;
+  }
+
+  .custom-scrollbar .swiper-scrollbar-drag {
+    background-color: rgba(66, 171, 222, 1);
+    border-radius: 100px;
+  }
+
+  /* Basic bullet styling */
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: grey;
+    opacity: 1;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .swiper-pagination-bullet::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: border 0.3s ease;
+  }
+
+  /* First bullet (red) */
+  .swiper-pagination-bullet:nth-child(1) {
+    background-color: red;
+  }
+
+  .swiper-pagination-bullet:nth-child(1):hover::before,
+  .swiper-pagination-bullet-active:nth-child(1)::before {
+    border: 1px solid rgba(255, 0, 0, 0.5);
+  }
+
+  /* Second bullet (blue) */
+  .swiper-pagination-bullet:nth-child(2) {
+    background-color: blue;
+  }
+
+  .swiper-pagination-bullet:nth-child(2):hover::before,
+  .swiper-pagination-bullet-active:nth-child(2)::before {
+    border: 1px solid rgba(0, 0, 255, 0.5);
+  }
+
+  /* Third bullet (green) */
+  .swiper-pagination-bullet:nth-child(3) {
+    background-color: green;
+  }
+
+  .swiper-pagination-bullet:nth-child(3):hover::before,
+  .swiper-pagination-bullet-active:nth-child(3)::before {
+    border: 1px solid rgba(0, 255, 0, 0.5);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const verticalSwiper = new Swiper('.swiper-container-vertical', {
+      direction: 'vertical',
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      navigation: {
+        nextEl: '.vertical-next',
+        prevEl: '.vertical-prev',
+      },
+      mousewheel: true,
+      scrollbar: {
+        el: '.custom-scrollbar',
+        dragSize: '50px',
+        draggable: true,
+        hide: false,
+      },
+    });
+
+    const horizontalSwiper = new Swiper('.swiper-container-horizontal', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: '.horizontal-pagination',
+        clickable: true,
+      },
+    });
+
+    verticalSwiper.controller.control = horizontalSwiper;
+    horizontalSwiper.controller.control = verticalSwiper;
+  });
+</script>

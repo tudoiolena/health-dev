@@ -109,6 +109,13 @@
         "product_KXMcK7"
       ],
       "settings": {
+        "title_text": "Discover our top sellers",
+        "subtitle_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsanquam."
+      }
+    },
+    "product_variants_slider_fTXqKK": {
+      "type": "product-variants-slider",
+      "settings": {
       }
     }
   },
@@ -116,6 +123,7 @@
     "main",
     "hero_tqCbmw",
     "collections_slider_R7BhqQ",
-    "top_sellers_Lajqhi"
+    "top_sellers_Lajqhi",
+    "product_variants_slider_fTXqKK"
   ]
 }
