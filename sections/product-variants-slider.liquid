@@ -3,17 +3,28 @@
     <div class="swiper-container-vertical">
       <div class="swiper-scrollbar custom-scrollbar"></div>
       <div class="swiper-wrapper">
-        <div class="swiper-slide vertical slide">
-          <h3 class="vertical-slider-product-title">The Health Project Ultimate Whey Protein</h3>
-          <p class="vertical-slider-product-weight">2000 g</p>
-          <p class="vertical-slider-product-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae,
-            accumsan quam. In auctor sem nunc, ac iaculis lacus dignissim nec.
-          </p>
-          <a href="#" class="button-small">Buy now</a>
-        </div>
-        <div class="swiper-slide vertical slide">Slide 2</div>
-        <div class="swiper-slide vertical slide">Slide 3</div>
+        {% for block in section.blocks %}
+          {% assign product = all_products[block.settings.selected_product] %}
+          {% if product.variants.size > 0 %}
+            <div
+              class="swiper-slide vertical slide"
+              data-product-id="{{ product.id }}"
+              data-variants="{{ product.variants | json |escape}}"
+            >
+              <h3 class="vertical-slider-product-title">{{ product.title }}</h3>
+              <p class="vertical-slider-product-weight">
+                {{ product.variants.first.weight }}
+                {{ product.variants.first.weight_unit }}
+              </p>
+              <div class="vertical-slider-product-description">
+                {{ product.description }}
+              </div>
+              <a href="{{ product.url }}" class="button-small">Buy now {{ product.price | money }}</a>
+            </div>
+          {% else %}
+            <div>No variants available for this product.</div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
 
@@ -22,19 +33,13 @@
         <img src="{{ 'icon-arrow-up.svg' | asset_url }}" alt="Arrow up" width="100%" height="100%">
       </div>
       <div class="vertical-next">
-        <img src="{{ 'icon-arrow-down.svg' | asset_url }}" alt="Arrow up" width="100%" height="100%">
+        <img src="{{ 'icon-arrow-down.svg' | asset_url }}" alt="Arrow down" width="100%" height="100%">
       </div>
     </div>
   </div>
 
   <div class="swiper-container-horizontal">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide horizontal">
-        <img src="{{ 'product-variant.png' | asset_url }}" alt="Product variant" width="100%" height="100%">
-      </div>
-      <div class="swiper-slide horizontal">2</div>
-      <div class="swiper-slide horizontal">3</div>
-    </div>
+    <div class="swiper-wrapper horizontal-swiper-wrapper"></div>
     <div class="horizontal-pagination swiper-pagination"></div>
   </div>
 </section>
@@ -89,7 +94,7 @@
     color: rgba(128, 128, 128, 1);
   }
 
-  .vertical-slider-product-description {
+  .vertical-slider-product-description span {
     font-family: Karla;
     font-size: 15px;
     font-weight: 400;
@@ -163,15 +168,18 @@
     border-radius: 100px;
   }
 
-  /* Basic bullet styling */
   .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
+    width: 18px;
+    height: 18px;
     background-color: grey;
     opacity: 1;
     border: 2px solid transparent;
     border-radius: 50%;
     position: relative;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: red;
   }
 
   .swiper-pagination-bullet::before {
@@ -186,34 +194,9 @@
     transition: border 0.3s ease;
   }
 
-  /* First bullet (red) */
-  .swiper-pagination-bullet:nth-child(1) {
-    background-color: red;
-  }
-
-  .swiper-pagination-bullet:nth-child(1):hover::before,
-  .swiper-pagination-bullet-active:nth-child(1)::before {
+  .swiper-pagination-bullet:hover::before,
+  .swiper-pagination-bullet-active::before {
     border: 1px solid rgba(255, 0, 0, 0.5);
-  }
-
-  /* Second bullet (blue) */
-  .swiper-pagination-bullet:nth-child(2) {
-    background-color: blue;
-  }
-
-  .swiper-pagination-bullet:nth-child(2):hover::before,
-  .swiper-pagination-bullet-active:nth-child(2)::before {
-    border: 1px solid rgba(0, 0, 255, 0.5);
-  }
-
-  /* Third bullet (green) */
-  .swiper-pagination-bullet:nth-child(3) {
-    background-color: green;
-  }
-
-  .swiper-pagination-bullet:nth-child(3):hover::before,
-  .swiper-pagination-bullet-active:nth-child(3)::before {
-    border: 1px solid rgba(0, 255, 0, 0.5);
   }
 </style>
 
@@ -247,7 +230,53 @@
       },
     });
 
-    verticalSwiper.controller.control = horizontalSwiper;
-    horizontalSwiper.controller.control = verticalSwiper;
+    function updateHorizontalSlider() {
+      const activeSlide = verticalSwiper.slides[verticalSwiper.activeIndex];
+
+      const variantsJson = activeSlide.getAttribute('data-variants');
+      let variants;
+
+      variants = JSON.parse(variantsJson.trim());
+      horizontalSwiper.removeAllSlides();
+
+      variants.forEach((variant) => {
+        const slide = document.createElement('div');
+        slide.classList.add('swiper-slide', 'horizontal');
+
+        const img = document.createElement('img');
+        img.src = variant.featured_image ? variant.featured_image.src : 'NO IMAGE';
+        img.alt = variant.title;
+
+        slide.appendChild(img);
+        horizontalSwiper.appendSlide(slide);
+      });
+      horizontalSwiper.update();
+    }
+    verticalSwiper.on('slideChange', updateHorizontalSlider);
   });
 </script>
+
+{% schema %}
+{
+  "name": "Product Variant Slider",
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "selected_product",
+          "label": "Select a product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Variant Slider",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

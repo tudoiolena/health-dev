@@ -115,6 +115,24 @@
     },
     "product_variants_slider_fTXqKK": {
       "type": "product-variants-slider",
+      "blocks": {
+        "product_bhAp6W": {
+          "type": "product",
+          "settings": {
+            "selected_product": "the-health-project-ultimate-whey-protein"
+          }
+        },
+        "product_P6yqgB": {
+          "type": "product",
+          "settings": {
+            "selected_product": "the-health-project-ultimate-whey-protein"
+          }
+        }
+      },
+      "block_order": [
+        "product_bhAp6W",
+        "product_P6yqgB"
+      ],
       "settings": {
       }
     }
