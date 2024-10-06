@@ -9,17 +9,28 @@
             <div
               class="swiper-slide vertical slide"
               data-product-id="{{ product.id }}"
-              data-variants="{{ product.variants | json |escape}}"
+              data-variants="{{ product.variants | json | escape }}"
             >
-              <h3 class="vertical-slider-product-title">{{ product.title }}</h3>
-              <p class="vertical-slider-product-weight">
+              <h3 class="vertical-slider-product-title" style="text-align: {{ block.settings.title_alignment }};">
+                {{ product.title }}
+              </h3>
+              <p class="vertical-slider-product-weight" style="text-align: {{ block.settings.weight_alignment }};">
                 {{ product.variants.first.weight }}
                 {{ product.variants.first.weight_unit }}
               </p>
-              <div class="vertical-slider-product-description">
+              <div
+                class="vertical-slider-product-description"
+                style="text-align: {{ block.settings.description_alignment }};"
+              >
                 {{ product.description }}
               </div>
-              <a href="{{ product.url }}" class="button-small">Buy now {{ product.price | money }}</a>
+              <a
+                href="{{ product.url }}"
+                class="button-small"
+                style="text-align: {{ block.settings.button_position }}; background-color: {{ block.settings.button_color }};"
+              >
+                Buy now {{ product.price | money }}
+              </a>
             </div>
           {% else %}
             <div>No variants available for this product.</div>
@@ -40,7 +51,9 @@
 
   <div class="swiper-container-horizontal">
     <div class="swiper-wrapper horizontal-swiper-wrapper"></div>
-    <div class="horizontal-pagination swiper-pagination"></div>
+    <div class="horizontal-pagination swiper-pagination">
+      <span class="swiper-pagination-bullet"></span>
+    </div>
   </div>
 </section>
 
@@ -179,7 +192,7 @@
   }
 
   .swiper-pagination-bullet-active {
-    background-color: red;
+    background-color: rgba(66, 171, 222, 1);
   }
 
   .swiper-pagination-bullet::before {
@@ -196,7 +209,7 @@
 
   .swiper-pagination-bullet:hover::before,
   .swiper-pagination-bullet-active::before {
-    border: 1px solid rgba(255, 0, 0, 0.5);
+    border: 1px solid rgba(66, 171, 222, 1);
   }
 </style>
 
@@ -252,6 +265,8 @@
       });
       horizontalSwiper.update();
     }
+    updateHorizontalSlider();
+
     verticalSwiper.on('slideChange', updateHorizontalSlider);
   });
 </script>
@@ -268,6 +283,56 @@
           "type": "product",
           "id": "selected_product",
           "label": "Select a product"
+        },
+        {
+          "type": "select",
+          "id": "title_alignment",
+          "label": "Title Alignment",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "select",
+          "id": "weight_alignment",
+          "label": "Weight Alignment",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "select",
+          "id": "description_alignment",
+          "label": "Description Alignment",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "select",
+          "id": "button_position",
+          "label": "Button Position",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "color",
+          "id": "button_color",
+          "label": "Button Color",
+          "default": "#42abde"
         }
       ]
     }

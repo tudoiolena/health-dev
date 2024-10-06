@@ -119,13 +119,25 @@
         "product_bhAp6W": {
           "type": "product",
           "settings": {
-            "selected_product": "the-health-project-ultimate-whey-protein"
+            "selected_product": "the-health-project-ultimate-whey-protein",
+            "title_alignment": "center",
+            "weight_alignment": "right",
+            "description_alignment": "right",
+            "button_position": "right",
+            "button_color": "#007bff",
+            "bullet_color": "#00e271"
           }
         },
         "product_P6yqgB": {
           "type": "product",
           "settings": {
-            "selected_product": "the-health-project-ultimate-whey-protein"
+            "selected_product": "the-health-project-ultimate-whey-protein",
+            "title_alignment": "left",
+            "weight_alignment": "left",
+            "description_alignment": "left",
+            "button_position": "center",
+            "button_color": "#007bff",
+            "bullet_color": "#cccccc"
           }
         }
       },
