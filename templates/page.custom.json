@@ -146,9 +146,41 @@
       "settings": {
       }
     },
-    "info_cQnX7d": {
+    "info_LRRiXJ": {
       "type": "info",
+      "blocks": {
+        "list_tem_hiz8JB": {
+          "type": "list-tem",
+          "settings": {
+            "image": "shopify://shop_images/list-item-1.png",
+            "large_list_title": "Whey Protein",
+            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
+          }
+        },
+        "list_tem_PgetNy": {
+          "type": "list-tem",
+          "settings": {
+            "image": "shopify://shop_images/list-tem-2.png",
+            "large_list_title": "Plant Protein",
+            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
+          }
+        },
+        "list_tem_jAWLFL": {
+          "type": "list-tem",
+          "settings": {
+            "image": "shopify://shop_images/list-item-3.png",
+            "large_list_title": "Ceratine",
+            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
+          }
+        }
+      },
+      "block_order": [
+        "list_tem_hiz8JB",
+        "list_tem_PgetNy",
+        "list_tem_jAWLFL"
+      ],
       "settings": {
+        "reverse_layout": false
       }
     }
   },
@@ -158,6 +190,6 @@
     "collections_slider_R7BhqQ",
     "top_sellers_Lajqhi",
     "product_variants_slider_xqKtyK",
-    "info_cQnX7d"
+    "info_LRRiXJ"
   ]
 }

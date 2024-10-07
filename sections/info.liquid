@@ -1,46 +1,35 @@
 <section class="info-large-container padding-top-bottom-20">
-  <div class="large-list">
-    <h3 class="large-list-item large-list-title">Whey Protein</h3>
-    <img
-      class="large-list-item"
-      width="150px"
-      height="75px"
-      alt="Image"
-      src="{{ 'large-list-product-1.png' | asset_url }}"
-    >
-    <p class="large-list-item large-list-text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiis
-      nobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero.
-    </p>
-  </div>
-  <div class="large-list">
-    <h3 class="large-list-item large-list-title">Whey Protein</h3>
-    <img
-      class="large-list-item"
-      width="150px"
-      height="75px"
-      alt="Image"
-      src="{{ 'large-list-product-2.png' | asset_url }}"
-    >
-    <p class="large-list-item large-list-text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiis
-      nobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero.
-    </p>
-  </div>
-  <div class="large-list">
-    <h3 class="large-list-item large-list-title">Whey Protein</h3>
-    <img
-      class="large-list-item"
-      width="150px"
-      height="75px"
-      alt="Image"
-      src="{{ 'large-list-product-3.png' | asset_url }}"
-    >
-    <p class="large-list-item large-list-text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiis
-      nobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero.
-    </p>
-  </div>
+  {% for block in section.blocks %}
+    <div class="large-list {% if section.settings.reverse_layout == true %} flex-row-reverse {% endif %}">
+      <h3 class="large-list-item large-list-title">
+        {% if block.settings.large_list_title != blank %}
+          {{ block.settings.large_list_title }}
+        {% endif %}
+      </h3>
+      {% if block.settings.large_list_title != blank %}
+        <img
+          src="{{ block.settings.image | image_url }}"
+          alt="{{ block.settings.title }}"
+          class="large-list-item image"
+          width="150px"
+          height="75px"
+        >
+      {%- else %}
+        <img
+          src="{{'large-list-product-1.png' | asset_url }}"
+          alt="Product image"
+          class="large-list-item"
+          width="150px"
+          height="75px"
+        >
+      {% endif %}
+      <p class="large-list-item large-list-text">
+        {% if block.settings.large_list_text != blank %}
+          {{ block.settings.large_list_text }}
+        {% endif %}
+      </p>
+    </div>
+  {% endfor %}
 </section>
 
 <style>
@@ -58,12 +47,16 @@
     padding: 20px 10px;
   }
 
+  .flex-row-reverse {
+    flex-direction: row-reverse;
+  }
   .large-list-title {
     font-family: Montserrat;
     font-size: 32px;
     font-weight: 500;
     line-height: 48px;
     color: rgba(35, 31, 32, 1);
+    width: 300px;
   }
 
   .large-list-text {
@@ -75,12 +68,22 @@
     color: rgba(128, 128, 128, 1);
   }
 
+  .large-list-item .image {
+    width: 150px;
+    height: 75px;
+  }
+
   @media (max-width: 765px) {
     .large-list {
       flex-direction: column;
     }
     .large-list-item:nth-child(2n - 1) {
       order: 1;
+    }
+
+    .large-list-title,
+    .large-list-text {
+      text-align: center;
     }
   }
 
@@ -102,7 +105,35 @@
 {% schema %}
 {
   "name": "Info",
-
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "reverse_layout",
+      "label": "Reverse Layout",
+      "default": false,
+      "info": "Enable to reverse the item orders"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "list-tem",
+      "name": "List Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "List Image"
+        },
+        { "type": "text", "id": "large_list_title", "label": "List Title", "default": "Protein" },
+        {
+          "type": "textarea",
+          "id": "large_list_text",
+          "label": "List Text",
+          "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Info Section",
