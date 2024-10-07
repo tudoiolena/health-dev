@@ -145,6 +145,11 @@
       ],
       "settings": {
       }
+    },
+    "info_cQnX7d": {
+      "type": "info",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -152,6 +157,7 @@
     "hero_tqCbmw",
     "collections_slider_R7BhqQ",
     "top_sellers_Lajqhi",
-    "product_variants_slider_xqKtyK"
+    "product_variants_slider_xqKtyK",
+    "info_cQnX7d"
   ]
 }
