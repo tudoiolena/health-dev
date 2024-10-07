@@ -113,22 +113,10 @@
         "subtitle_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsanquam."
       }
     },
-    "product_variants_slider_fTXqKK": {
+    "product_variants_slider_xqKtyK": {
       "type": "product-variants-slider",
       "blocks": {
-        "product_bhAp6W": {
-          "type": "product",
-          "settings": {
-            "selected_product": "the-health-project-ultimate-whey-protein",
-            "title_alignment": "center",
-            "weight_alignment": "right",
-            "description_alignment": "right",
-            "button_position": "right",
-            "button_color": "#007bff",
-            "bullet_color": "#00e271"
-          }
-        },
-        "product_P6yqgB": {
+        "product_mJh8nK": {
           "type": "product",
           "settings": {
             "selected_product": "the-health-project-ultimate-whey-protein",
@@ -136,14 +124,24 @@
             "weight_alignment": "left",
             "description_alignment": "left",
             "button_position": "center",
-            "button_color": "#007bff",
-            "bullet_color": "#cccccc"
+            "button_color": "#42abde"
+          }
+        },
+        "product_BRW78q": {
+          "type": "product",
+          "settings": {
+            "selected_product": "the-health-project-ultimate-whey-protein",
+            "title_alignment": "left",
+            "weight_alignment": "left",
+            "description_alignment": "left",
+            "button_position": "center",
+            "button_color": "#42abde"
           }
         }
       },
       "block_order": [
-        "product_bhAp6W",
-        "product_P6yqgB"
+        "product_mJh8nK",
+        "product_BRW78q"
       ],
       "settings": {
       }
@@ -154,6 +152,6 @@
     "hero_tqCbmw",
     "collections_slider_R7BhqQ",
     "top_sellers_Lajqhi",
-    "product_variants_slider_fTXqKK"
+    "product_variants_slider_xqKtyK"
   ]
 }
