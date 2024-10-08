@@ -1,9 +1,27 @@
 <header class="header container">
-  <a href="#" class="header__logo">
-    <img src="{{ 'logo.png' | asset_url }}" width="100%" height="100%" alt="THP">
+  <a href="{{ routes.root_url }}" class="header__logo">
+    <img
+      src="
+        {%
+        if section.settings.logo_image == blank %}
+          {{ 'logo.png' | asset_url }}
+        {% else %}
+           {{ section.settings.logo_image | image_url: width: 100 }}
+        {% endif %}
+      "
+      alt="{{ section.settings.logo_alt_text }}"
+      width="100%"
+      height="100%"
+      class="logo"
+    >
   </a>
   <nav class="header__nav">
     <ul>
+      {% for block in section.blocks %}
+        <li class="header__nav-item">
+          <a href="{{ block.settings.menu_item_link }}">{{ block.settings.menu_item_text }}</a>
+        </li>
+      {% endfor %}
       <li class="header__nav-item"><a href="/">Catalog</a></li>
       <li class="header__nav-item"><a href="#">Categories</a></li>
       <li class="header__nav-item"><a href="#">About</a></li>
@@ -12,7 +30,9 @@
       <li class="header__nav-item"><a href="#">Contact us</a></li>
     </ul>
   </nav>
-  <button class="button button-default header__button">Visit market</button>
+  <a href="{{ section.settings.button_link }}">
+    <button class="button button-default header__button">{{ section.settings.button_text }}</button>
+  </a>
   <i class="hamburder-icon" onclick="openMenu()">
     <img src="{{ 'icon.burger-menu.svg' | asset_url }}" alt="logo" width="100%" height="100%">
   </i>
@@ -23,13 +43,23 @@
     <img src="{{ 'icon.burger-close.svg' | asset_url }}" alt="logo" width="100%" height="100%">
   </div>
   <ol id="menu">
-    <li><a href="#">Catalog</a></li>
-    <li><a href="#">Categories</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Reviews</a></li>
-    <li><a href="#">FAQ</a></li>
-    <li><a href="#">Contact us</a></li>
-    <li><button class="button button-default header__button button-wide">Visit market</button></li>
+    {% for block in section.blocks %}
+      <li>
+        <a href="{{ block.settings.menu_item_link }}">{{ block.settings.menu_item_text }}</a>
+      </li>
+    {% else %}
+      <li><a href="#">Catalog</a></li>
+      <li><a href="#">Categories</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Contact us</a></li>
+      <li>
+        <a href="{{ section.settings.button_link }}">
+          <button class="button button-default header__button button-wide">{{ section.settings.button_text }}</button>
+        </a>
+      </li>
+    {% endfor %}
   </ol>
 </div>
 
@@ -43,3 +73,101 @@
     document.getElementById('menu').style.opacity = '0';
   }
 </script>
+
+{% schema %}
+{
+  "name": "Landing Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "logo_alt_text",
+      "label": "Logo Alt Text",
+      "default": "Logo Alt Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo Image"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Visit market"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "/"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu_item",
+      "name": "Menu Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "menu_item_text",
+          "label": "Menu Item Title"
+        },
+        {
+          "type": "url",
+          "id": "menu_item_link",
+          "label": "Menu Item Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Landing Header",
+      "blocks": [
+        {
+          "type": "menu_item",
+          "settings": {
+            "menu_item_text": "Catalog",
+            "menu_item_link": "#catalog"
+          }
+        },
+        {
+          "type": "menu_item",
+          "settings": {
+            "menu_item_text": "Categories",
+            "menu_item_link": "#categories"
+          }
+        },
+        {
+          "type": "menu_item",
+          "settings": {
+            "menu_item_text": "About",
+            "menu_item_link": "#about"
+          }
+        },
+        {
+          "type": "menu_item",
+          "settings": {
+            "menu_item_text": "Reviews",
+            "menu_item_link": "#reviews"
+          }
+        },
+        {
+          "type": "menu_item",
+          "settings": {
+            "menu_item_text": "FAQ",
+            "menu_item_link": "#faq"
+          }
+        },
+        {
+          "type": "menu_item",
+          "settings": {
+            "menu_item_text": "Contact us",
+            "menu_item_link": "#contactus"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
