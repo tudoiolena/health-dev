@@ -1,0 +1,160 @@
+{{ 'product-variants.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .swiper-vertical-prev {
+    background: url("{{ 'icon-arrow-up.svg' | asset_url }}") no-repeat center;
+  }
+
+  .swiper-vertical-next {
+    background: url("{{ 'icon-arrow-down.svg' | asset_url }}") no-repeat center;
+  }
+</style>
+
+<section class="product-variants container">
+  <div class="swiper-vertical">
+    <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.selected_product] %}
+        <div class="swiper-slide">
+          <div class="slide-container">
+            <h2 class="vertical-slider-product-title">{{ product.title }}</h2>
+            <div class="swiper-horizontal-container">
+              <div class="swiper-horizontal">
+                <div class="swiper-wrapper">
+                  {% if product.variants.size > 1 %}
+                    {% for variant in product.variants %}
+                      <div class="swiper-slide">
+                        {{ variant.featured_media | image_url: width: 500, height: 500 | image_tag }}
+                      </div>
+                    {% endfor %}
+                  {% else %}
+                    <div class="swiper-slide">
+                      {{ product.featured_image | image_url: width: 500, height: 500 | image_tag }}
+                    </div>
+                  {% endif %}
+                </div>
+                <div class="swiper-horizontal-pagination"></div>
+              </div>
+            </div>
+            <div
+              class="vertical-slider-product-description"
+              style=" text-align: {{ block.settings.description_alignment }};"
+            >
+              <div class="weight">
+                {{ product.variants.first.weight }}
+                {{ product.variants.first.weight_unit }}
+              </div>
+              <p>
+                {{ product.description }}
+              </p>
+              <a
+                href="{{ product.url }}"
+                class="button-small"
+                style="background-color: {{ block.settings.button_color }};"
+              >
+                {{- block.settings.button_text -}}
+                &nbsp;
+                {{- product.price | money -}}
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="swiper-vertical-navigation">
+      <div class="swiper-vertical-prev"></div>
+      <div class="swiper-vertical-scrollbar"></div>
+      <div class="swiper-vertical-next"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const isMobile = () => window.innerWidth < 1366;
+
+    const productsSwiper = new Swiper('.swiper-vertical', {
+      direction: isMobile() ? 'horizontal' : 'vertical',
+      spaceBetween: 8,
+      scrollbar: {
+        el: '.swiper-vertical-scrollbar',
+      },
+      navigation: {
+        prevEl: '.swiper-vertical-prev',
+        nextEl: '.swiper-vertical-next',
+      },
+      on: {
+        resize: () => {
+          productsSwiper.changeDirection(isMobile() ? 'horizontal' : 'vertical');
+        },
+      },
+    });
+
+    const variantsSwiper = new Swiper('.swiper-horizontal', {
+      direction: 'horizontal',
+      spaceBetween: 14,
+      slidesPerView: 1,
+      pagination: {
+        el: '.swiper-horizontal-pagination',
+        clickable: true,
+      },
+      on: {
+        touchStart: () => {
+          productsSwiper.allowTouchMove = false;
+        },
+        touchEnd: () => {
+          productsSwiper.allowTouchMove = true;
+        },
+      },
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Product With Variants",
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "selected_product",
+          "label": "Select a product"
+        },
+        {
+          "type": "select",
+          "id": "description_alignment",
+          "label": "Description Alignment",
+          "options": [
+            { "value": "start", "label": "Left" },
+            { "value": "center", "label": "Center" },
+            { "value": "end", "label": "Right" }
+          ],
+          "default": "start"
+        },
+        {
+          "type": "color",
+          "id": "button_color",
+          "label": "Button Color",
+          "default": "#42abde"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Buy now"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product With Variants",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

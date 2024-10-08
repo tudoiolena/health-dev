@@ -1,6 +1,18 @@
-:root {
+/* :root {
   --font-family-primary: "Karla", sans-serif;
   --font-family-secondary: "Montserrat", sans-serif;
+  --color-primary: rgba(128, 128, 128, 1);
+  --color-accent: rgba(66, 171, 222, 1);
+  --color-black: rgba(35, 31, 32, 1);
+  --color-white: rgb(255, 255, 255);
+  --color-light-grey: rgba(248, 248, 248, 1);
+  --font-size-small: 15px;
+  --font-size-large: 24px;
+} */
+
+:root {
+  --font-karla: Karla, sans-serif;
+  --font-montserrat: Montserrat, sans-serif;
   --color-primary: rgba(128, 128, 128, 1);
   --color-accent: rgba(66, 171, 222, 1);
   --color-black: rgba(35, 31, 32, 1);
@@ -11,14 +23,8 @@
 }
 
 .header-custom {
-  margin: 10px 0;
-  max-width: 1990px;
-}
-
-@media screen and (min-width: 600px) {
-  .header-logo {
-    margin-left: 20px;
-  }
+  margin: 10px auto 10px auto;
+  max-width: 1920px;
 }
 
 .header-container {
@@ -183,6 +189,7 @@ span.boo {
   overflow: hidden;
   z-index: 2;
   top: -45px;
+  display: none;
 }
 
 .a-header ul {
@@ -274,17 +281,12 @@ span.boo {
   display: inline-block;
 }
 
-@media only screen and (min-width: 900px) {
-  .a-header {
-    display: none;
-  }
-  .header-navigation,
-  .button-small {
-    display: flex;
-  }
+.header-navigation,
+.button-small {
+  display: flex;
 }
 
-@media only screen and (max-width: 899px) {
+@media (max-width: 768px) {
   .a-header {
     display: block;
   }
@@ -296,6 +298,10 @@ span.boo {
     justify-content: left;
     position: relative;
     z-index: 1;
+  }
+
+  .header-logo {
+    padding-left: 15px;
   }
 }
 
@@ -406,10 +412,6 @@ span.boo {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.swiper-wrapper {
-  margin-bottom: 20px;
 }
 
 .arrow-left,

@@ -1,22 +1,35 @@
-<section class="hero-section">
+<section class="hero-section-{{ section.id }}">
   <div class="swiper-container-hero">
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
         <div class="swiper-slide item">
           <div class="item-inner">
-            <img
-              src="{{ block.settings.image | image_url }}"
-              alt="{{ block.settings.title }}"
-              class="hero-img"
-              width="100%"
-              height="100%"
-            >
+            {% if block.settings.image %}
+              <img
+                src="{{ block.settings.image | image_url }}"
+                alt="{{ block.settings.title }}"
+                class="hero-img"
+                width="100%"
+                height="100%"
+              >
+            {% else %}
+              <img
+                src="{{'banner.png' | asset_url }}"
+                alt="Banner image"
+                class="hero-img"
+                width="100%"
+                height="100%"
+              >
+            {% endif %}
           </div>
 
           <div class="hero-content" style="text-align: {{ block.settings.title_alignment }};">
             <h2 class="hero-title">{{ block.settings.title }}</h2>
             <p class="hero-subtitle">{{ block.settings.text }}</p>
-            {% unless block.settings.hide_button %}
+          </div>
+
+          {% unless block.settings.hide_button %}
+            <div class="button-arrows-container">
               <a
                 href="{{ block.settings.button_link }}"
                 class="hero-button"
@@ -24,24 +37,26 @@
               >
                 {{- block.settings.button_text -}}
               </a>
-            {% endunless %}
-          </div>
+
+              {% if section.blocks.size > 1 %}
+                <div class="arrows-container-hero">
+                  <div class="arrow-left-hero">
+                    <img src="{{ 'icon-arrow-left.svg' | asset_url }}" alt="Previous" width="100%" height="100%">
+                  </div>
+
+                  <div class="arrow-right-hero autoplay-progress">
+                    <svg viewBox="0 0 60 60">
+                      <circle cx="30" cy="30" r="29.5"></circle>
+                    </svg>
+                    <span></span>
+                    <img src="{{ 'icon-arrow-right.svg' | asset_url }}" alt="Next" width="100%" height="100%">
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          {% endunless %}
         </div>
       {% endfor %}
-    </div>
-
-    <div class="arrows-container-hero">
-      <div class="arrow-left-hero">
-        <img src="{{ 'icon-arrow-left.svg' | asset_url }}" alt="Previous" width="100%" height="100%">
-      </div>
-
-      <div class="arrow-right-hero autoplay-progress">
-        <svg viewBox="0 0 60 60">
-          <circle cx="30" cy="30" r="29.5"></circle>
-        </svg>
-        <span></span>
-        <img src="{{ 'icon-arrow-right.svg' | asset_url }}" alt="Next" width="100%" height="100%">
-      </div>
     </div>
   </div>
 </section>
@@ -51,7 +66,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 86vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -69,10 +84,6 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-  }
-
-  .hero-section {
-    max-width: 1990px;
   }
 
   .hero-content {
@@ -119,9 +130,6 @@
     width: 140px;
     cursor: pointer;
     z-index: 3;
-    position: absolute;
-    right: 100px;
-    bottom: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -161,25 +169,55 @@
     width: 60px;
   }
 
-  @media screen and (max-width: 1366px) {
-    .hero-content {
-      max-width: 320px;
+  .button-arrows-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 76px;
+    bottom: 25px;
+    width: 1700px;
+  }
+
+  .hero-section-{{ section.id }} {
+         max-width: 1920px;
+         margin: 0 auto;
+  }
+
+  @media (max-width: 1360px) {
+    .button-arrows-container {
+      width: 1200px;
     }
   }
-  @media screen and (max-width: 768px) {
+
+  @media (max-width: 768px) {
     .hero-content {
-      position: relative;
-      bottom: 0;
-      left: 10px;
+      bottom: -70px;
     }
 
-    .arrows-container-hero {
-      bottom: 0;
-      right: 10px;
+    .button-arrows-container {
+      bottom: -140px;
+      width: 680px;
     }
 
-    .hero-button {
-      max-width: calc(100%-160px);
+    .hero-img {
+      height: 80%;
+      object-fit: cover;
+    }
+  }
+  @media (max-width: 428px) {
+    .hero-content {
+      left: 20px;
+      bottom: 0px;
+    }
+    .button-arrows-container {
+      bottom: -70px;
+      left: 20px;
+      width: 400px;
+    }
+
+    .hero-img {
+      height: 85%;
     }
   }
 </style>
@@ -196,9 +234,6 @@
       navigation: {
         nextEl: '.arrow-right-hero',
         prevEl: '.arrow-left-hero',
-      },
-      autoplay: {
-        delay: 3000,
       },
       on: {
         autoplayTimeLeft(s, time, progress) {
@@ -226,12 +261,14 @@
         {
           "type": "text",
           "id": "title",
-          "label": "Slide Title"
+          "label": "Slide Title",
+          "default": "ULTIMATE CREATINE 250g"
         },
         {
           "type": "textarea",
           "id": "text",
-          "label": "Slide Text"
+          "label": "Slide Text",
+          "default": "THE HEALTH PROJECT"
         },
         {
           "type": "url",
@@ -241,7 +278,8 @@
         {
           "type": "text",
           "id": "button_text",
-          "label": "Button Text"
+          "label": "Button Text",
+          "default": "Buy now $24.99"
         },
         {
           "type": "select",
@@ -277,7 +315,17 @@
   "presets": [
     {
       "name": "Hero Section",
-      "category": "Custom Sections"
+      "category": "Custom Sections",
+      "blocks": [
+        {
+          "type": "slide",
+          "settings": {
+            "title": "ULTIMATE CREATINE 250g",
+            "text": "THE HEALTH PROJECT",
+            "button_text": "Buy now $24.99"
+          }
+        }
+      ]
     }
   ]
 }

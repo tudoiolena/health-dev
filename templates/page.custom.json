@@ -18,178 +18,48 @@
         "padding_bottom": 28
       }
     },
-    "hero_tqCbmw": {
-      "type": "hero",
+    "product_variants_FiCAWd": {
+      "type": "product-variants",
       "blocks": {
-        "slide_akHptC": {
-          "type": "slide",
+        "product_BEaijV": {
+          "type": "product",
           "settings": {
-            "image": "shopify://shop_images/Creatine_caps_1.png",
-            "title": "ULTIMATE CREATINE 250g",
-            "text": "THE HEALTH PROJECT",
-            "button_link": "",
-            "button_text": "Buy now $24.99",
-            "title_alignment": "left",
-            "button_alignment": "center",
-            "hide_button": false
+            "selected_product": "the-health-project-ultimate-whey-protein",
+            "description_alignment": "left",
+            "button_color": "#42abde",
+            "button_text": "Buy now"
           }
         },
-        "slide_FzfnRQ": {
-          "type": "slide",
+        "product_NrTdMi": {
+          "type": "product",
           "settings": {
-            "image": "shopify://shop_images/Creatine_caps_1.png",
-            "title": "ULTIMATE CREATINE 250g",
-            "text": "THE HEALTH PROJECT",
-            "button_link": "",
-            "button_text": "Buy now $24.99",
-            "title_alignment": "left",
-            "button_alignment": "center",
-            "hide_button": false
+            "selected_product": "the-health-project-ultimate-whey-protein",
+            "description_alignment": "left",
+            "button_color": "#42abde",
+            "button_text": "Buy now"
           }
-        }
-      },
-      "block_order": [
-        "slide_akHptC",
-        "slide_FzfnRQ"
-      ],
-      "settings": {
-      }
-    },
-    "collections_slider_R7BhqQ": {
-      "type": "collections-slider",
-      "settings": {
-        "collection_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
-        "selected_collections": [
-          "protein",
-          "wellbeing",
-          "performance"
-        ]
-      }
-    },
-    "top_sellers_Lajqhi": {
-      "type": "top-sellers",
-      "blocks": {
-        "product_63xBVw": {
+        },
+        "product_BW47XW": {
           "type": "product",
           "settings": {
             "selected_product": "creatine-monohydrate",
-            "background_color": "#f0f8fc",
-            "text_color": "#42abde"
-          }
-        },
-        "product_Xb6aCN": {
-          "type": "product",
-          "settings": {
-            "selected_product": "mass-gainer",
-            "background_color": "#fdf2f2",
-            "text_color": "#e35f5e"
-          }
-        },
-        "product_k7QVMi": {
-          "type": "product",
-          "settings": {
-            "selected_product": "plant-protein",
-            "background_color": "#f2f9f5",
-            "text_color": "#5bb984"
-          }
-        },
-        "product_KXMcK7": {
-          "type": "product",
-          "settings": {
-            "selected_product": "whey-protein",
-            "background_color": "#f0f8fc",
-            "text_color": "#42abde"
+            "description_alignment": "start",
+            "button_color": "#42abde",
+            "button_text": "Buy now"
           }
         }
       },
       "block_order": [
-        "product_63xBVw",
-        "product_Xb6aCN",
-        "product_k7QVMi",
-        "product_KXMcK7"
+        "product_BEaijV",
+        "product_NrTdMi",
+        "product_BW47XW"
       ],
       "settings": {
-        "title_text": "Discover our top sellers",
-        "subtitle_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsanquam."
-      }
-    },
-    "product_variants_slider_xqKtyK": {
-      "type": "product-variants-slider",
-      "blocks": {
-        "product_mJh8nK": {
-          "type": "product",
-          "settings": {
-            "selected_product": "the-health-project-ultimate-whey-protein",
-            "title_alignment": "left",
-            "weight_alignment": "left",
-            "description_alignment": "left",
-            "button_position": "center",
-            "button_color": "#42abde"
-          }
-        },
-        "product_BRW78q": {
-          "type": "product",
-          "settings": {
-            "selected_product": "the-health-project-ultimate-whey-protein",
-            "title_alignment": "left",
-            "weight_alignment": "left",
-            "description_alignment": "left",
-            "button_position": "center",
-            "button_color": "#42abde"
-          }
-        }
-      },
-      "block_order": [
-        "product_mJh8nK",
-        "product_BRW78q"
-      ],
-      "settings": {
-      }
-    },
-    "info_LRRiXJ": {
-      "type": "info",
-      "blocks": {
-        "list_tem_hiz8JB": {
-          "type": "list-tem",
-          "settings": {
-            "image": "shopify://shop_images/list-item-1.png",
-            "large_list_title": "Whey Protein",
-            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
-          }
-        },
-        "list_tem_PgetNy": {
-          "type": "list-tem",
-          "settings": {
-            "image": "shopify://shop_images/list-tem-2.png",
-            "large_list_title": "Plant Protein",
-            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
-          }
-        },
-        "list_tem_jAWLFL": {
-          "type": "list-tem",
-          "settings": {
-            "image": "shopify://shop_images/list-item-3.png",
-            "large_list_title": "Ceratine",
-            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
-          }
-        }
-      },
-      "block_order": [
-        "list_tem_hiz8JB",
-        "list_tem_PgetNy",
-        "list_tem_jAWLFL"
-      ],
-      "settings": {
-        "reverse_layout": false
       }
     }
   },
   "order": [
     "main",
-    "hero_tqCbmw",
-    "collections_slider_R7BhqQ",
-    "top_sellers_Lajqhi",
-    "product_variants_slider_xqKtyK",
-    "info_LRRiXJ"
+    "product_variants_FiCAWd"
   ]
 }
