@@ -17,49 +17,9 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
-    },
-    "product_variants_FiCAWd": {
-      "type": "product-variants",
-      "blocks": {
-        "product_BEaijV": {
-          "type": "product",
-          "settings": {
-            "selected_product": "the-health-project-ultimate-whey-protein",
-            "description_alignment": "left",
-            "button_color": "#42abde",
-            "button_text": "Buy now"
-          }
-        },
-        "product_NrTdMi": {
-          "type": "product",
-          "settings": {
-            "selected_product": "the-health-project-ultimate-whey-protein",
-            "description_alignment": "left",
-            "button_color": "#42abde",
-            "button_text": "Buy now"
-          }
-        },
-        "product_BW47XW": {
-          "type": "product",
-          "settings": {
-            "selected_product": "creatine-monohydrate",
-            "description_alignment": "start",
-            "button_color": "#42abde",
-            "button_text": "Buy now"
-          }
-        }
-      },
-      "block_order": [
-        "product_BEaijV",
-        "product_NrTdMi",
-        "product_BW47XW"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
-    "main",
-    "product_variants_FiCAWd"
+    "main"
   ]
 }

@@ -1,15 +1,3 @@
-/* :root {
-  --font-family-primary: "Karla", sans-serif;
-  --font-family-secondary: "Montserrat", sans-serif;
-  --color-primary: rgba(128, 128, 128, 1);
-  --color-accent: rgba(66, 171, 222, 1);
-  --color-black: rgba(35, 31, 32, 1);
-  --color-white: rgb(255, 255, 255);
-  --color-light-grey: rgba(248, 248, 248, 1);
-  --font-size-small: 15px;
-  --font-size-large: 24px;
-} */
-
 :root {
   --font-karla: Karla, sans-serif;
   --font-montserrat: Montserrat, sans-serif;
@@ -18,290 +6,199 @@
   --color-black: rgba(35, 31, 32, 1);
   --color-white: rgb(255, 255, 255);
   --color-light-grey: rgba(248, 248, 248, 1);
+  --menu-border-color: rgba(221, 221, 221, 1);
   --font-size-small: 15px;
   --font-size-large: 24px;
 }
 
-.header-custom {
-  margin: 10px auto 10px auto;
-  max-width: 1920px;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.logo {
-  width: 173px;
-}
-
-.header-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 35px;
-}
-
-.header-list li {
-  list-style: none;
-}
-
-.header-list a:hover,
-.header-list a:active {
-  color: var(--color-accent);
-}
-
-.header-list a {
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-  color: var(--color-primary);
-  font-family: var(--font-family-primary);
-}
-
-.button-small {
-  background-color: var(--color-accent);
-  padding: 14px 28px;
-  color: var(--color-white);
-  border: none;
-  border-radius: 100px;
-  font-size: 15px;
-  font-family: var(--font-family-secondary);
-  text-decoration: none;
-}
-
-.burger-check {
+.hamburder-icon {
+  margin: 20px;
+  font-size: 25px;
+  cursor: pointer;
   display: none;
 }
-
-/*--------------------------------------
- Sets the actionable area for the burger
- including a label for usability
---------------------------------------*/
-.burger {
-  position: relative;
+#close {
+  margin: 20px;
   float: right;
-  width: 60px;
-  height: 60px;
+  color: #000;
+  font-size: 20px;
   cursor: pointer;
 }
-
-.burger:after {
-  position: absolute;
-  left: 0px;
+#container {
+  position: fixed;
+  top: 0;
+  right: -100%;
   width: 100%;
-}
-
-/*--------------------------------------
- Creates the look of the burger icon
- using the inner span and pseudo-elements
---------------------------------------*/
-.burger span,
-.burger span:before,
-.burger span:after {
-  position: absolute;
-  left: 10px;
-  top: 22px;
-  width: 40px;
-  height: 4px;
-  background: var(--color-accent);
-  border-radius: 0.2em;
-  /* -webkit-transition: all 0.3s; */
-  transition: all 0.3s;
-  box-sizing: border-box;
-}
-
-/* Reset the left and create the pseudo-element */
-.burger span:before,
-.burger span:after {
-  content: "";
-  left: 0;
-}
-
-/* Top bar position */
-.burger span:before {
-  top: -10px;
-}
-
-/* Bottom bar position */
-.burger span:after {
-  top: 10px;
-}
-
-/* Get rid of more on action (IE9 or higher) */
-.burger-check:checked + .burger:after {
-  content: "";
-}
-/* Get rid of the middle bar on action (IE9 or higher) */
-
-.burger-check:checked + .burger span {
-  height: 0;
-  width: 0;
-}
-
-/* Moves the top and bottom bars to the middle on action (IE9 or higher) */
-.burger-check:checked + .burger span:before,
-.burger-check:checked + .burger span:after {
-  top: 6px;
-}
-
-/* Rotates the top bar on action with full browser support (IE9 or higher) */
-.burger-check:checked + .burger span:before {
-  -webkit-transform: rotate(225deg);
-  -ms-transform: rotate(225deg);
-  transform: rotate(225deg);
-}
-
-/* Rotates the bottom bar on action with full browser support (IE9 or higher) */
-.burger-check:checked + .burger span:after {
-  -webkit-transform: rotate(-225deg);
-  -ms-transform: rotate(225deg);
-  transform: rotate(-225deg);
-}
-
-/*==============================================================================
- Simple reveal (IE9 or higher)
-==============================================================================*/
-span.boo {
-  width: auto;
-  margin-top: 0;
-  line-height: 60px;
-  height: 0;
-  overflow: hidden;
-}
-
-/* Reveals Boo! (IE9 or higher) */
-#main-nav-test:checked ~ .boo {
-  height: 50px;
-}
-
-/*==============================================================================
- Simple mobile menu opening and closing (IE9 or higher)
-==============================================================================*/
-.a-header {
-  position: relative;
-  float: left;
-  width: 100%;
-  margin: 0;
-  min-height: 50px;
-  overflow: hidden;
-  z-index: 2;
-  top: -45px;
+  height: 100%;
+  background: var(--color-white);
+  text-align: center;
+  transition: all 0.6s ease;
   display: none;
-}
-
-.a-header ul {
-  position: relative;
-  float: left;
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  visibility: hidden;
-}
-
-.a-header ul li {
-  display: block;
-}
-
-.nav-link {
-  position: relative;
-  /* float: left; */
-  width: 100%;
-  height: 0;
-  line-height: 42px;
-  text-decoration: none;
-  overflow: hidden;
-  color: var(--color-black);
-  text-align: center;
-  font-size: 28px;
-  font-family: var(--font-family-secondary);
-  font-weight: 400;
-  display: block;
-  /* padding: 15px 0; */
-  /* border-top: 1px solid var(--color-primary); */
-  transition: height 0.3s ease;
-}
-
-.nav-link:hover,
-.nav-link:active,
-.nav-link:focus {
-  text-decoration: none;
-  color: var(--color-accent);
-}
-
-.button-large:hover {
-  color: var(--color-accent);
-  background-color: var(--color-white);
-  border: 1px solid var(--color-accent);
-  width: 98%;
-}
-
-/* Animate height of 'a' element in order to reveal the menu on check (IE9 or higher) */
-#main-nav:checked ~ ul {
-  visibility: visible;
-}
-
-#main-nav:checked ~ ul .nav-link {
-  padding: 15px 0;
-  height: auto;
-}
-
-#main-nav:checked ~ ul li {
-  border-top: 1px solid var(--color-primary);
-  display: block;
-}
-
-#main-nav:checked ~ ul li:last-child {
-  border-top: 1px solid var(--color-primary);
-}
-
-#main-nav:checked ~ ul .button-large {
-  visibility: visible;
-}
-
-#main-nav ~ ul .button-large {
-  visibility: hidden;
-  margin-top: 10px;
-}
-
-.button-large {
-  background-color: var(--color-accent);
-  color: var(--color-white);
-  border: none;
-  border-radius: 100px;
-  font-size: 15px;
-  font-family: var(--font-family-secondary);
-  text-decoration: none;
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
-  display: inline-block;
-}
-
-.header-navigation,
-.button-small {
-  display: flex;
 }
 
 @media (max-width: 768px) {
-  .a-header {
+  #container {
     display: block;
   }
-  .header-navigation,
-  .button-small {
+}
+
+#menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  top: 100px;
+  bottom: 0px;
+  list-style: none;
+  text-align: center;
+  opacity: 0;
+  transition: all 1s ease;
+
+  counter-reset: item;
+}
+
+#menu li {
+  border-top: 1px solid var(--menu-border-color);
+  line-height: normal;
+  background-color: var(--color-white);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#menu li::before {
+  content: counter(item, decimal-leading-zero);
+  counter-increment: item;
+  position: absolute;
+  top: 25px;
+  left: 6px;
+  /* font-weight: bold; */
+
+  font-family: var(--font-montserrat);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: var(--color-primary);
+}
+#menu li:last-child::before {
+  content: " ";
+}
+
+#menu li a {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  /* font-size: 40px; */
+  /* font-weight: bold; */
+  color: var(--color-black);
+  margin: 5px 0px;
+  transition: all 0.3s ease;
+  font-family: var(--font-montserrat);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 42px;
+  text-align: left;
+}
+#menu li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/**/
+
+.container {
+  max-width: 1410px;
+  margin: 0 auto;
+}
+
+/*HEADER*/
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.header__nav ul {
+  display: flex;
+  column-gap: 30px;
+  align-items: center;
+}
+
+.header__logo {
+  width: 200px;
+  position: relative;
+  z-index: 10;
+}
+
+.header__button {
+  background-color: rgba(66, 171, 222, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+  .header__nav {
     display: none;
   }
-  .header-container {
-    justify-content: left;
-    position: relative;
-    z-index: 1;
+  .header button {
+    display: none;
   }
+  .hamburder-icon {
+    display: block;
+  }
+}
 
-  .header-logo {
-    padding-left: 15px;
+.header__nav-item {
+  font-family: var(--font-karla);
+  font-size: var(--font-size-small);
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: var(--color-primary);
+}
+
+/*BUTTONS*/
+
+.button {
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  vertical-align: middle;
+  border: unset;
+}
+
+.button-wide {
+  width: 90%;
+}
+
+.button-default {
+  min-height: 38px;
+  font-size: 14px;
+  line-height: normal;
+  padding-right: 17px;
+  font-weight: 500;
+  border-radius: 20px;
+}
+
+.header__button {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .header__button {
+    text-align: center;
   }
 }
 
