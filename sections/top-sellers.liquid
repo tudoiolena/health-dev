@@ -1,3 +1,5 @@
+{{ 'top-sellers.css' | asset_url | stylesheet_tag }}
+
 <section class="top-seller-section">
   <div class="top-seller-text-container">
     <h3 class="top-seller-title">{{ section.settings.title_text }}</h3>
@@ -5,7 +7,7 @@
       {{ section.settings.subtitle_text }}
     </p>
   </div>
-  <div class="card-container">
+  <div class="card-container container">
     {% assign has_selected_products = false %}
 
     {% for product_block in section.blocks %}
@@ -44,7 +46,7 @@
 
           <div class="top-seller-image">
             {% if product %}
-              <img src="{{product.featured_image | image_url}}" alt="{{ product.title }}" width="100%" height="100%">
+              <img src="{{product.featured_image | image_url}}" alt="{{ product.title }}" width="auto" height="auto">
             {% endif %}
           </div>
         </div>
@@ -71,7 +73,7 @@
     {% endunless %}
   </div>
 
-  <div id="top-seller-swiper" class="swiper-container swiper-container-top-seller ">
+  <div id="top-seller-swiper" class="swiper-container swiper-container-top-seller container">
     <div class="swiper-wrapper top-seller-wrapper">
       {% assign has_selected_products = false %}
       {% for product_block in section.blocks %}
@@ -108,8 +110,8 @@
                   <img
                     src="{{ product.featured_image | image_url }}"
                     alt="{{ product.title }}"
-                    width="100%"
-                    height="100%"
+                    width="auto"
+                    height="auto"
                   >
                 {% endif %}
               </div>
@@ -143,13 +145,11 @@
     </div>
 
     <div class="top-seller-arrow-container">
-      <div class="gap">
-        <div class="top-seller-arrow-left">
-          <img src="{{ 'arrow-left-small.png' | asset_url }}" alt="Previous" width="100%" height="100%">
-        </div>
-        <div class="top-seller-arrow-right">
-          <img src="{{ 'arrow-right-small.png' | asset_url }}" alt="Next" width="100%" height="100%">
-        </div>
+      <div class="top-seller-arrow-left">
+        <img src="{{ 'arrow-left-small.png' | asset_url }}" alt="Previous" width="auto" height="auto">
+      </div>
+      <div class="top-seller-arrow-right">
+        <img src="{{ 'arrow-right-small.png' | asset_url }}" alt="Next" width="auto" height="auto">
       </div>
     </div>
   </div>
@@ -158,19 +158,16 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     new Swiper('#top-seller-swiper', {
-      slidesPerView: 1.2,
-      spaceBetween: 15,
+      slidesPerView: 1,
+      spaceBetween: 10,
       loop: true,
       navigation: {
         nextEl: '.top-seller-arrow-right',
         prevEl: '.top-seller-arrow-left',
       },
-      autoplay: {
+      {% comment %} autoplay: {
         delay: 3000,
-      },
-      breakpoints: {
-        768: { slidesPerView: 1 },
-      },
+      }, {% endcomment %}
       pagination: false,
     });
   });
@@ -225,7 +222,7 @@
           "type": "product",
           "settings": {
             "selected_product": "",
-            "background_color": "rgba(66, 171, 222, 0.08)",
+            "background_color": "#f0f9fd",
             "text_color": "rgba(66, 171, 222, 1)"
           }
         },
@@ -233,7 +230,7 @@
           "type": "product",
           "settings": {
             "selected_product": "",
-            "background_color": "rgba(227, 95, 94, 0.08)",
+            "background_color": "#fdf3f3",
             "text_color": "rgba(227, 95, 94, 1)"
           }
         }

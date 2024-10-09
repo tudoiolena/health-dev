@@ -18,20 +18,56 @@
         "padding_bottom": 28
       }
     },
-    "collections_slider_ckPWPG": {
-      "type": "collections-slider",
+    "top_sellers_TMVUBz": {
+      "type": "top-sellers",
+      "blocks": {
+        "product_q77CNY": {
+          "type": "product",
+          "settings": {
+            "selected_product": "whey-protein",
+            "background_color": "#bfd4de",
+            "text_color": "#42abde"
+          }
+        },
+        "product_7E8EEM": {
+          "type": "product",
+          "settings": {
+            "selected_product": "mass-gainer",
+            "background_color": "#f1bbbb",
+            "text_color": "#e35f5e"
+          }
+        },
+        "product_xciBRU": {
+          "type": "product",
+          "settings": {
+            "selected_product": "plant-protein",
+            "background_color": "",
+            "text_color": ""
+          }
+        },
+        "product_cNkaTd": {
+          "type": "product",
+          "settings": {
+            "selected_product": "creatine-monohydrate",
+            "background_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_q77CNY",
+        "product_7E8EEM",
+        "product_xciBRU",
+        "product_cNkaTd"
+      ],
       "settings": {
-        "collection_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
-        "selected_collections": [
-          "protein",
-          "wellbeing",
-          "performance"
-        ]
+        "title_text": "Discover our top sellers",
+        "subtitle_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsanquam."
       }
     }
   },
   "order": [
     "main",
-    "collections_slider_ckPWPG"
+    "top_sellers_TMVUBz"
   ]
 }
