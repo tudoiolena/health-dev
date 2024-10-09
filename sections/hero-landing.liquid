@@ -1,47 +1,51 @@
 {{ 'hero-landing.css' | asset_url | stylesheet_tag }}
 
-<section class="hero-slider">
+<section class="hero-slider-{{ section.id }}">
   <div class="swiper-container-hero">
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
-        <div class="swiper-slide  hero-slider__item">
-          {% if block.settings.image %}
-            <img
-              src="{{ block.settings.image | image_url }}"
-              alt="{{ block.settings.title }}"
-              class="hero-img"
-              width="100%"
-              height="100%"
-            >
-          {% else %}
-            <img
-              src="{{'banner.png' | asset_url }}"
-              alt="Banner image"
-              class="hero-img"
-              width="100%"
-              height="100%"
-            >
-          {% endif %}
+        <div class="swiper-slide">
+          <div class="hero-slider__item">
+            {% if block.settings.image %}
+              <img
+                src="{{ block.settings.image | image_url }}"
+                alt="{{ block.settings.title }}"
+                class="hero-img"
+                width="auto"
+                height="auto"
+              >
+            {% else %}
+              <img
+                src="{{'banner-default.png' | asset_url }}"
+                alt="Banner image"
+                class="hero-img"
+                width="auto"
+                height="auto"
+              >
+            {% endif %}
+          </div>
           <div class="hero-slider__item-caption" style="text-align: {{ block.settings.title_alignment }};">
             <h3>{{ block.settings.title }}</h3>
             <p>{{ block.settings.text }}</p>
-            <button class="button button-default">{{- block.settings.button_text -}}</button>
-          </div>
-        </div>
-        <div class="hero-slider__arrows">
-          <div class="arrow-left-hero">
-            <img src="{{ 'icon-arrow-left.svg' | asset_url }}" alt="Previous" width="100%" height="100%">
-          </div>
-
-          <div class="arrow-right-hero autoplay-progress">
-            <svg viewBox="0 0 60 60">
-              <circle cx="30" cy="30" r="29.5"></circle>
-            </svg>
-            <span></span>
-            <img src="{{ 'icon-arrow-right.svg' | asset_url }}" alt="Next" width="100%" height="100%">
+            <a class="button-hero">
+              <button class="button button-default hero-button-font">{{- block.settings.button_text -}}</button>
+            </a>
           </div>
         </div>
       {% endfor %}
+    </div>
+    <div class="hero-slider__arrows">
+      <div class="arrow-left-hero">
+        <img src="{{ 'icon-arrow-left.svg' | asset_url }}" alt="Previous" width="100%" height="100%">
+      </div>
+
+      <div class="arrow-right-hero autoplay-progress">
+        <svg viewBox="0 0 60 60">
+          <circle cx="30" cy="30" r="29.5"></circle>
+        </svg>
+        <span></span>
+        <img src="{{ 'icon-arrow-right.svg' | asset_url }}" alt="Next" width="100%" height="100%">
+      </div>
     </div>
   </div>
 </section>
@@ -59,6 +63,10 @@
         nextEl: '.arrow-right-hero',
         prevEl: '.arrow-left-hero',
       },
+      {% comment %} autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      }, {% endcomment %}
       on: {
         autoplayTimeLeft(s, time, progress) {
           progressCircle.style.setProperty('--progress', 1 - progress);

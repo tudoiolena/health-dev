@@ -18,20 +18,44 @@
         "padding_bottom": 28
       }
     },
-    "collections_slider_YXjamR": {
-      "type": "collections-slider",
+    "hero_landing_8zKhr7": {
+      "type": "hero-landing",
+      "blocks": {
+        "slide_GmNjYw": {
+          "type": "slide",
+          "settings": {
+            "title": "ULTIMATE CREATINE 250g",
+            "text": "THE HEALTH PROJECT",
+            "button_link": "",
+            "button_text": "Buy now $24.99",
+            "title_alignment": "left",
+            "button_alignment": "left",
+            "hide_button": false
+          }
+        },
+        "slide_dUrT7K": {
+          "type": "slide",
+          "settings": {
+            "title": "ULTIMATE CREATINE 250g",
+            "text": "THE HEALTH PROJECT",
+            "button_link": "",
+            "button_text": "Buy now $24.99",
+            "title_alignment": "left",
+            "button_alignment": "left",
+            "hide_button": false
+          }
+        }
+      },
+      "block_order": [
+        "slide_GmNjYw",
+        "slide_dUrT7K"
+      ],
       "settings": {
-        "collection_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
-        "selected_collections": [
-          "performance",
-          "protein",
-          "wellbeing"
-        ]
       }
     }
   },
   "order": [
     "main",
-    "collections_slider_YXjamR"
+    "hero_landing_8zKhr7"
   ]
 }
