@@ -62,30 +62,9 @@
 </section>
 
 <script>
-  let swiper;
+  let activeSwiper = null;
 
   document.addEventListener('DOMContentLoaded', function () {
-    swiper = new Swiper('#collections-swiper', {
-      slidesPerView: 1,
-      observer: true,
-      observeParents: true,
-      spaceBetween: 15,
-      loop: true,
-      navigation: {
-        nextEl: '.arrow-right',
-        prevEl: '.arrow-left',
-      },
-      autoplay: {
-        delay: 3000,
-      },
-      breakpoints: {
-        1024: { slidesPerView: 4 },
-        768: { slidesPerView: 2 },
-        400: { slidesPerView: 1 },
-      },
-      pagination: false,
-    });
-
     const firstTab = document.querySelector('.tablinks');
     const firstCollectionId = firstTab.getAttribute('onclick').match(/'([^']+)'/)[1];
     openCollection({ currentTarget: firstTab }, firstCollectionId);
@@ -109,9 +88,28 @@
 
     evt.currentTarget.classList.add('active');
 
-    if (swiper) {
-      swiper.update();
+    if (activeSwiper) {
+      activeSwiper.destroy(true, true);
     }
+
+    activeSwiper = new Swiper('#collections-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 15,
+      loop: true,
+      navigation: {
+        nextEl: '.arrow-right',
+        prevEl: '.arrow-left',
+      },
+      autoplay: {
+        delay: 3000,
+      },
+      breakpoints: {
+        1024: { slidesPerView: 4 },
+        768: { slidesPerView: 2 },
+        400: { slidesPerView: 1 },
+      },
+      pagination: false,
+    });
   }
 </script>
 
