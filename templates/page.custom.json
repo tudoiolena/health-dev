@@ -17,9 +17,21 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "collections_slider_ckPWPG": {
+      "type": "collections-slider",
+      "settings": {
+        "collection_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+        "selected_collections": [
+          "protein",
+          "wellbeing",
+          "performance"
+        ]
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collections_slider_ckPWPG"
   ]
 }

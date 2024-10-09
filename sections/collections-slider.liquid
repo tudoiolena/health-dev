@@ -1,11 +1,13 @@
+{{ 'collections-slider.css' | asset_url | stylesheet_tag }}
+
 <section id="collections-slider-section">
   <div id="collections-slider" class="collection-slider-section">
     <div class="collection-content-container">
       {% for collection in section.settings.selected_collections %}
-        <div class="collection-content-item">
-          <a class="no-decor" href="{{ collection.url }}">
+        <div class="collection-content-item tab">
+          <button class="tablinks" onclick="openCollection(event, '{{ collection.id }}')">
             <h3 class="collection-title">{{ collection.title }}</h3>
-          </a>
+          </button>
           <p class="collection-amount">{{ collection.products_count }}</p>
         </div>
       {% endfor %}
@@ -20,7 +22,7 @@
     <div class="swiper-wrapper">
       {% for collection in section.settings.selected_collections %}
         {% for product in collection.products %}
-          <div class="swiper-slide">
+          <div class="swiper-slide tabcontent {{ collection.id }}">
             <a class="no-decor" href="{{ product.url }}">
               <div class="product-container">
                 <div class="product-image-container">
@@ -58,9 +60,12 @@
     </div>
   </div>
 </section>
+
 <script>
+  let swiper;
+
   document.addEventListener('DOMContentLoaded', function () {
-    const swiper = new Swiper('#collections-swiper', {
+    swiper = new Swiper('#collections-swiper', {
       slidesPerView: 1,
       spaceBetween: 15,
       loop: true,
@@ -78,7 +83,34 @@
       },
       pagination: false,
     });
+
+    const firstTab = document.querySelector('.tablinks');
+    const firstCollectionId = firstTab.getAttribute('onclick').match(/'([^']+)'/)[1];
+    openCollection({ currentTarget: firstTab }, firstCollectionId);
   });
+
+  function openCollection(evt, collectionId) {
+    const tabcontent = document.getElementsByClassName('tabcontent');
+    for (let i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = 'none';
+    }
+
+    const tablinks = document.getElementsByClassName('tablinks');
+    for (let i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove('active');
+    }
+
+    const selectedProducts = document.getElementsByClassName(collectionId);
+    for (let i = 0; i < selectedProducts.length; i++) {
+      selectedProducts[i].style.display = 'block';
+    }
+
+    evt.currentTarget.classList.add('active');
+
+    if (swiper) {
+      swiper.update();
+    }
+  }
 </script>
 
 {% schema %}

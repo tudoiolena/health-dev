@@ -138,14 +138,6 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
-      },
-      "header-custom": {
-        "type": "header-custom",
-        "settings": {
-          "logo_alt_text": "{{ shop.name }} Logo",
-          "button_text": "Visit market",
-          "button_link": "/"
-        }
       }
     },
     "content_for_index": [
