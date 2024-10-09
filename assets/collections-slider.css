@@ -1,3 +1,7 @@
+#collections-swiper {
+  overflow: hidden;
+}
+
 .collection-slider-section {
   display: flex;
   flex-direction: column;
@@ -58,7 +62,6 @@
 .product-container {
   background: var(--color-light-grey);
   border-radius: 12px;
-  padding-top: 10px;
   height: 500px;
   width: 100%;
 }
@@ -66,6 +69,8 @@
 .product-image-container {
   height: 350px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .product-text-container {
@@ -136,7 +141,7 @@
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 400px) {
+@media (max-width: 428px) {
   .collection-title,
   .collection-amount {
     font-size: 24px;
@@ -147,7 +152,7 @@
   }
 }
 
-@media screen and (min-width: 401px) and (max-width: 760px) {
+@media (min-width: 428px) and (max-width: 768px) {
   .collection-title,
   .collection-amount {
     font-size: 32px;
@@ -163,7 +168,6 @@
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
   transition: 0.3s;
 }
 
@@ -171,11 +175,11 @@
   color: var(--color-black);
 }
 
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border-top: none;
-}
+/* .tabcontent { */
+/* display: none; */
+/* padding: 6px 12px; */
+/* border-top: none; */
+/* } */
 
 .tabcontent {
   animation: fadeEffect 1s;

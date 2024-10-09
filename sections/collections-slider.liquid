@@ -1,6 +1,6 @@
 {{ 'collections-slider.css' | asset_url | stylesheet_tag }}
 
-<section id="collections-slider-section">
+<section id="collections-slider-section" class="container">
   <div id="collections-slider" class="collection-slider-section">
     <div class="collection-content-container">
       {% for collection in section.settings.selected_collections %}
@@ -29,8 +29,8 @@
                   <img
                     src="{{ product.featured_image | image_url }}"
                     alt="{{ product.title }}"
-                    width="100%"
-                    height="100%"
+                    width="auto"
+                    height="auto"
                   >
                 </div>
                 <div class="product-text-container">
@@ -67,6 +67,8 @@
   document.addEventListener('DOMContentLoaded', function () {
     swiper = new Swiper('#collections-swiper', {
       slidesPerView: 1,
+      observer: true,
+      observeParents: true,
       spaceBetween: 15,
       loop: true,
       navigation: {
