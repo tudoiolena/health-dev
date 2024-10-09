@@ -20,7 +20,55 @@
     },
     "gallery_for_landing_wapV8b": {
       "type": "gallery-for-landing",
+      "blocks": {
+        "image_3Fjf8P": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gallery-image-2.jpg"
+          }
+        },
+        "image_qYkV7n": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gallery-default-image.jpg"
+          }
+        },
+        "image_ArVPPB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gallery-image-1.1.jpg"
+          }
+        },
+        "image_HWhgP6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gallery-image-1.2.jpg"
+          }
+        },
+        "image_6DXUqn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gallery-default-image.jpg"
+          }
+        },
+        "image_JrB77K": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gallery-image-2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_3Fjf8P",
+        "image_qYkV7n",
+        "image_ArVPPB",
+        "image_HWhgP6",
+        "image_6DXUqn",
+        "image_JrB77K"
+      ],
       "settings": {
+        "gallery_title": "Lorem ipsum dolor sit amet",
+        "gallery_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsanquam."
       }
     }
   },

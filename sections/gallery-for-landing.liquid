@@ -2,47 +2,25 @@
 
 <section class="swiper-container-gallery">
   <div class="gallery-text-content">
-    <h3>Lorem ipsum dolor sit amet</h3>
+    <h3>{{ section.settings.gallery_title }}</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan
-      quam.
+      {{ section.settings.gallery_text }}
     </p>
   </div>
 
   <div class="gallery-swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="gallery-slide-container">
-          <img src="{{'gallery-default-image.jpeg' | asset_url}}" width="auto" height="auto">
+      {% for block in section.blocks %}
+        <div class="swiper-slide">
+          <div class="gallery-slide-container">
+            <img
+              src="{{ block.settings.image | image_url }}"
+              width="auto"
+              height="auto"
+            >
+          </div>
         </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="gallery-slide-container">
-          <img src="{{'gallery-default-image.jpeg' | asset_url}}" width="auto" height="auto">
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="gallery-slide-container">
-          <img src="{{'gallery-default-image.jpeg' | asset_url}}" width="auto" height="auto">
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="gallery-slide-container">
-          <img src="{{'gallery-default-image.jpeg' | asset_url}}" width="auto" height="auto">
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="gallery-slide-container">
-          <img src="{{'gallery-default-image.jpeg' | asset_url}}" width="auto" height="auto">
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="gallery-slide-container">
-          <img src="{{'gallery-default-image.jpeg' | asset_url}}" width="auto" height="auto">
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -76,8 +54,38 @@
 {% schema %}
 {
   "name": "Gallery for Landing",
-  "settings": [],
-  "blocks": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "gallery_title",
+      "label": "Gallery Title",
+      "default": "Lorem ipsum dolor sit amet"
+    },
+    {
+      "type": "textarea",
+      "id": "gallery_text",
+      "label": "Gallery Text",
+      "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsanquam."
+    },
+    {
+      "type": "image_picker",
+      "id": "default_image",
+      "label": "Default Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Slide Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Slide Image"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Gallery for Landing",
