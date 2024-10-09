@@ -63,10 +63,10 @@
         nextEl: '.arrow-right-hero',
         prevEl: '.arrow-left-hero',
       },
-      {% comment %} autoplay: {
+      autoplay: {
         delay: 5000,
         disableOnInteraction: false,
-      }, {% endcomment %}
+      },
       on: {
         autoplayTimeLeft(s, time, progress) {
           progressCircle.style.setProperty('--progress', 1 - progress);

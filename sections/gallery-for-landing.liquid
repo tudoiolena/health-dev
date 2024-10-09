@@ -1,0 +1,88 @@
+{{ 'gallery-landing.css' | asset_url | stylesheet_tag }}
+
+<section class="swiper-container-gallery">
+  <div class="gallery-text-content">
+    <h3>Lorem ipsum dolor sit amet</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan
+      quam.
+    </p>
+  </div>
+
+  <div class="gallery-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="gallery-slide-container">
+          <img src="{{'gallery-default-image.jpeg' | asset_url}}" width="auto" height="auto">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="gallery-slide-container">
+          <img src="{{'gallery-default-image.jpeg' | asset_url}}" width="auto" height="auto">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="gallery-slide-container">
+          <img src="{{'gallery-default-image.jpeg' | asset_url}}" width="auto" height="auto">
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="gallery-slide-container">
+          <img src="{{'gallery-default-image.jpeg' | asset_url}}" width="auto" height="auto">
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="gallery-slide-container">
+          <img src="{{'gallery-default-image.jpeg' | asset_url}}" width="auto" height="auto">
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="gallery-slide-container">
+          <img src="{{'gallery-default-image.jpeg' | asset_url}}" width="auto" height="auto">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.gallery-swiper', {
+      direction: 'horizontal',
+      slidesPerView: 1.2,
+      spaceBetween: 10,
+      loop: true,
+      allowTouchMove: true,
+      breakpoints: {
+        1366: {
+          slidesPerView: 4.2,
+          centeredSlides: true,
+        },
+        768: {
+          slidesPerView: 2.2,
+          centeredSlides: true,
+        },
+        428: {
+          slidesPerView: 1.2,
+          centeredSlides: true,
+        },
+      },
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Gallery for Landing",
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Gallery for Landing",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

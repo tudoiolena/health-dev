@@ -18,44 +18,14 @@
         "padding_bottom": 28
       }
     },
-    "hero_landing_8zKhr7": {
-      "type": "hero-landing",
-      "blocks": {
-        "slide_GmNjYw": {
-          "type": "slide",
-          "settings": {
-            "title": "ULTIMATE CREATINE 250g",
-            "text": "THE HEALTH PROJECT",
-            "button_link": "",
-            "button_text": "Buy now $24.99",
-            "title_alignment": "left",
-            "button_alignment": "left",
-            "hide_button": false
-          }
-        },
-        "slide_dUrT7K": {
-          "type": "slide",
-          "settings": {
-            "title": "ULTIMATE CREATINE 250g",
-            "text": "THE HEALTH PROJECT",
-            "button_link": "",
-            "button_text": "Buy now $24.99",
-            "title_alignment": "left",
-            "button_alignment": "left",
-            "hide_button": false
-          }
-        }
-      },
-      "block_order": [
-        "slide_GmNjYw",
-        "slide_dUrT7K"
-      ],
+    "gallery_for_landing_wapV8b": {
+      "type": "gallery-for-landing",
       "settings": {
       }
     }
   },
   "order": [
     "main",
-    "hero_landing_8zKhr7"
+    "gallery_for_landing_wapV8b"
   ]
 }
