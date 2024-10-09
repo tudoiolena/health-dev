@@ -18,62 +18,46 @@
         "padding_bottom": 28
       }
     },
-    "gallery_for_landing_wapV8b": {
-      "type": "gallery-for-landing",
+    "info_tpE3B3": {
+      "type": "info",
       "blocks": {
-        "image_3Fjf8P": {
-          "type": "image",
+        "list_tem_wDkxUf": {
+          "type": "list-tem",
           "settings": {
-            "image": "shopify://shop_images/gallery-image-2.jpg"
+            "image": "shopify://shop_images/list-image-1.jpg",
+            "large_list_title": "Protein",
+            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
           }
         },
-        "image_qYkV7n": {
-          "type": "image",
+        "list_tem_UwpaUn": {
+          "type": "list-tem",
           "settings": {
-            "image": "shopify://shop_images/gallery-default-image.jpg"
+            "image": "shopify://shop_images/list-image2.jpg",
+            "large_list_title": "Plant Protein",
+            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
           }
         },
-        "image_ArVPPB": {
-          "type": "image",
+        "list_tem_QrmgCJ": {
+          "type": "list-tem",
           "settings": {
-            "image": "shopify://shop_images/gallery-image-1.1.jpg"
-          }
-        },
-        "image_HWhgP6": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/gallery-image-1.2.jpg"
-          }
-        },
-        "image_6DXUqn": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/gallery-default-image.jpg"
-          }
-        },
-        "image_JrB77K": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/gallery-image-2.jpg"
+            "image": "shopify://shop_images/list-image3.png",
+            "large_list_title": "Whey Protein",
+            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
           }
         }
       },
       "block_order": [
-        "image_3Fjf8P",
-        "image_qYkV7n",
-        "image_ArVPPB",
-        "image_HWhgP6",
-        "image_6DXUqn",
-        "image_JrB77K"
+        "list_tem_wDkxUf",
+        "list_tem_UwpaUn",
+        "list_tem_QrmgCJ"
       ],
       "settings": {
-        "gallery_title": "Lorem ipsum dolor sit amet",
-        "gallery_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsanquam."
+        "reverse_layout": false
       }
     }
   },
   "order": [
     "main",
-    "gallery_for_landing_wapV8b"
+    "info_tpE3B3"
   ]
 }
