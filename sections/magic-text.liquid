@@ -1,0 +1,70 @@
+{{ 'magic-text.css' | asset_url | stylesheet_tag }}
+
+<section class="magic-typography container">
+  {% for block in section.blocks %}
+    <div class="post-item">
+      <h4 class="post-item__heading">{{ block.settings.magic_text_title }}</h4>
+      <div class="post-item__text-container">
+        <p class="post-item__main-text">{{ block.settings.magic_text_main_text }}</p>
+        <p class="post-item__sub-text">{{ block.settings.magic_text_sub_text }}</p>
+      </div>
+    </div>
+  {% endfor %}
+  <div style="clear: both;"></div>
+</section>
+
+{% schema %}
+{
+  "name": "Magic Text",
+  "blocks": [
+    {
+      "type": "text_item",
+      "name": "Text Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "magic_text_title",
+          "label": "Text Title",
+          "default": "DISCOVER THE HEALTH PROJECT AT DISCOUNT SUPPLEMENTS TODAY!"
+        },
+        {
+          "type": "text",
+          "id": "magic_text_main_text",
+          "label": "Main Text",
+          "default": "Find whey protein, mass gainers, health and wellness supplements and more in convenient capsules, pouches and bundles when you shop the range at Discount Supplements today! Or, to learn more about this great brand and its products, why not check out our blog?"
+        },
+        {
+          "type": "text",
+          "id": "magic_text_sub_text",
+          "label": "Sub Text",
+          "default": "Each product within The Health Project brand features back-to-basics branding, making each product easier for both new and existing customers to understand. So, whether you're looking to add more whey or plant protein to your workouts or simply want to try out the brand with one of our supplement bundles, you'll find everything you need!",
+          "info": "Optional additional small text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Magic Text",
+      "blocks": [
+        {
+          "type": "text_item",
+          "settings": {
+            "magic_text_title": "DISCOVER THE HEALTH PROJECT AT DISCOUNT SUPPLEMENTS TODAY!",
+            "magic_text_main_text": "Find whey protein, mass gainers, health and wellness supplements and more in convenient capsules, pouches and bundles when you shop the range at Discount Supplements today! Or, to learn more about this great brand and its products, why not check out our blog?",
+            "magic_text_sub_text": ""
+          }
+        },
+        {
+          "type": "text_item",
+          "settings": {
+            "magic_text_title": "THE HEALTH PROJECT",
+            "magic_text_main_text": "Find whey protein, mass gainers, health and wellness wide selection of supplements tailored to your health needs and fitness goals. Formerly Optimum Health, one of Discount Supplements' biggest sellers since 2010, you can find all the great products you'd expect from the brand in the same great flavours and formulas. So you can trust The Health Project to deliver the same gains and results that you've come to expect!",
+            "magic_text_sub_text": "Each product within The Health Project brand features back-to-basics branding, making each product easier for both new and existing customers to understand. So, whether you're looking to add more whey or plant protein to your workouts or simply want to try out the brand with one of our supplement bundles, you'll find everything you need!"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

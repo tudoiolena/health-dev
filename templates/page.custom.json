@@ -18,47 +18,29 @@
         "padding_bottom": 28
       }
     },
-    "faq_EgT9k9": {
-      "type": "faq",
+    "magic_text_wcbMcV": {
+      "type": "magic-text",
       "blocks": {
-        "faq_item_gBzWTU": {
-          "type": "faq_item",
+        "text_item_caNTa6": {
+          "type": "text_item",
           "settings": {
-            "accordeon_number": "01",
-            "accordeon_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices?",
-            "accordeon_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam."
+            "magic_text_title": "DISCOVER THE HEALTH PROJECT AT DISCOUNT SUPPLEMENTS TODAY!",
+            "magic_text_main_text": "Find whey protein, mass gainers, health and wellness supplements and more in convenient capsules, pouches and bundles when you shop the range at Discount Supplements today! Or, to learn more about this great brand and its products, why not check out our blog?",
+            "magic_text_sub_text": ""
           }
         },
-        "faq_item_Wgkri8": {
-          "type": "faq_item",
+        "text_item_bCQ3JN": {
+          "type": "text_item",
           "settings": {
-            "accordeon_number": "02",
-            "accordeon_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices?",
-            "accordeon_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam."
-          }
-        },
-        "faq_item_4Ex4ki": {
-          "type": "faq_item",
-          "settings": {
-            "accordeon_number": "03",
-            "accordeon_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices?",
-            "accordeon_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam."
-          }
-        },
-        "faq_item_fGyn7T": {
-          "type": "faq_item",
-          "settings": {
-            "accordeon_number": "04",
-            "accordeon_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices?",
-            "accordeon_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam."
+            "magic_text_title": "DISCOVER THE HEALTH PROJECT AT DISCOUNT SUPPLEMENTS TODAY!",
+            "magic_text_main_text": "Find whey protein, mass gainers, health and wellness supplements and more in convenient capsules, pouches and bundles when you shop the range at Discount Supplements today! Or, to learn more about this great brand and its products, why not check out our blog?",
+            "magic_text_sub_text": "Each product within The Health Project brand features back-to-basics branding, making each product easier for both new and existing customers to understand. So, whether you're looking to add more whey or plant protein to your workouts or simply want to try out the brand with one of our supplement bundles, you'll find everything you need!"
           }
         }
       },
       "block_order": [
-        "faq_item_gBzWTU",
-        "faq_item_Wgkri8",
-        "faq_item_4Ex4ki",
-        "faq_item_fGyn7T"
+        "text_item_caNTa6",
+        "text_item_bCQ3JN"
       ],
       "settings": {
       }
@@ -66,6 +48,6 @@
   },
   "order": [
     "main",
-    "faq_EgT9k9"
+    "magic_text_wcbMcV"
   ]
 }
