@@ -1,0 +1,255 @@
+/* Contact us*/
+.contacts-container {
+  background-color: rgba(66, 171, 222, 1);
+  border-radius: 70px;
+  max-width: 1920px;
+  margin: 0 auto 20px auto;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+}
+.contact-section-text {
+  padding-left: 258px;
+}
+.contact-section-text a {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
+}
+.contact-section-text a::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+}
+.contact-section-text a::before {
+  content: " ↗";
+  display: block;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  right: -40px;
+}
+.contact-section-text p {
+  padding-bottom: 10px;
+  color: rgba(255, 255, 255, 1);
+}
+.contact-section-image {
+  /* width: 747px;
+  height: 600px; */
+}
+.contact-section-image img {
+  /* max-width: 748px;
+  height: auto; */
+  border-radius: 70px;
+}
+
+@media (max-width: 1920px) {
+  .contact-section-text {
+    padding-left: calc(258px - ((1920px - 100vw) / 2));
+  }
+}
+
+@media (max-width: 1530px) {
+  .contact-section-text {
+    padding-left: 63px;
+  }
+  .contact-section-image {
+    /* width: auto; */
+    height: 456px;
+  }
+  .contact-section-image img {
+    /* width: auto;
+    height: 456px;
+    height: auto; */
+    border-radius: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column-reverse;
+    padding: 0px 0px 0px 0px;
+  }
+  .contact-section-text {
+    padding: 60px 0px;
+  }
+  .contact-section-text a {
+    font-size: 2.5rem;
+  }
+  .contact-section-image {
+    min-width: 320px;
+    width: 100vw;
+    height: auto;
+  }
+  .contact-section-image img {
+    min-width: 320px;
+    width: 100vw;
+  }
+}
+
+/*INPUT FIELDS*/
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+textarea {
+  border: 1px solid rgb(202, 210, 214);
+  padding: 10px;
+  max-height: 200px;
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.input-error {
+  border: 1px solid red !important;
+  outline: none;
+}
+.input-error:focus-visible {
+  border: 1px solid red !important;
+  outline: none;
+}
+.input-error:focus {
+  border: 1px solid red !important;
+  outline: none;
+}
+
+.input-default {
+  min-height: 38px;
+  border: 1px solid rgb(228, 231, 237);
+  border-radius: 4px;
+}
+
+.input-large {
+  min-height: 48px;
+  border: 1px solid rgb(202, 210, 214);
+  padding: 10px;
+  border-radius: 15px;
+}
+.input-large:focus-visible {
+  border: 1px solid rgb(80, 94, 104);
+  outline: none;
+}
+.input-large:focus {
+  border: 1px solid rgb(80, 94, 104);
+  outline: none;
+}
+
+.input-large::placeholder,
+.input-error::placeholder {
+  font-family: var(--font-karla);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: var(--color-primary);
+}
+
+.checkbox-default {
+  display: flex;
+}
+.checkbox-default__input {
+  width: 20px;
+  height: 20px;
+  margin-right: 19px;
+  margin-left: 2px;
+  margin-top: 2px;
+  box-shadow: unset;
+  min-height: unset;
+}
+
+.field {
+  height: 72px;
+}
+
+.form-body__error-message {
+  font-size: 10px;
+  color: red;
+  font-family: var(--font-karla);
+}
+
+/*MODAL WINDOW*/
+
+.form-header {
+  border-bottom: 1px solid var(--menu-border-color);
+}
+
+.form-body {
+  padding: 10px;
+}
+
+.form-header__heading {
+  font-family: var(--font-family-secondary);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  color: var(--color-black);
+  padding-left: 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-content {
+  background-color: var(--color-white);
+  font-family: "Lexend", sans-serif;
+  padding: 20px 0px;
+  border-radius: 20px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 540px;
+}
+@media (max-width: 768px) {
+  .modal-content {
+    width: 100%;
+    margin: 0px 24px;
+    min-width: 320px;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 428px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 1366px) {
+}
+
+@media (max-width: 1920px) {
+}

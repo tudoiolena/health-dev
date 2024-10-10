@@ -18,10 +18,354 @@
         "padding_bottom": 28
       }
     },
-    "magic_text_wcbMcV": {
+    "hero_landing_pyzJrL": {
+      "type": "hero-landing",
+      "blocks": {
+        "slide_7Lebif": {
+          "type": "slide",
+          "settings": {
+            "title": "ULTIMATE CREATINE 250g",
+            "text": "THE HEALTH PROJECT",
+            "button_link": "",
+            "button_text": "Buy now $24.99",
+            "title_alignment": "left",
+            "button_alignment": "left",
+            "hide_button": false
+          }
+        },
+        "slide_YFnLzn": {
+          "type": "slide",
+          "settings": {
+            "title": "ULTIMATE CREATINE 250g",
+            "text": "THE HEALTH PROJECT",
+            "button_link": "",
+            "button_text": "Buy now $24.99",
+            "title_alignment": "left",
+            "button_alignment": "left",
+            "hide_button": false
+          }
+        }
+      },
+      "block_order": [
+        "slide_7Lebif",
+        "slide_YFnLzn"
+      ],
+      "settings": {
+      }
+    },
+    "collections_slider_9H3nYx": {
+      "type": "collections-slider",
+      "settings": {
+        "collection_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+        "selected_collections": [
+          "wellbeing",
+          "protein",
+          "performance"
+        ]
+      }
+    },
+    "top_sellers_NpbUJ4": {
+      "type": "top-sellers",
+      "blocks": {
+        "product_hpxe3W": {
+          "type": "product",
+          "settings": {
+            "selected_product": "creatine-monohydrate",
+            "background_color": "#f0f9fd",
+            "text_color": "#42abde"
+          }
+        },
+        "product_zehcwT": {
+          "type": "product",
+          "settings": {
+            "selected_product": "mass-gainer",
+            "background_color": "#fdf3f3",
+            "text_color": "#e35f5e"
+          }
+        },
+        "product_kJiyrB": {
+          "type": "product",
+          "settings": {
+            "selected_product": "plant-protein",
+            "background_color": "",
+            "text_color": ""
+          }
+        },
+        "product_D9mceT": {
+          "type": "product",
+          "settings": {
+            "selected_product": "whey-protein",
+            "background_color": "",
+            "text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_hpxe3W",
+        "product_zehcwT",
+        "product_kJiyrB",
+        "product_D9mceT"
+      ],
+      "settings": {
+        "title_text": "Discover our top sellers",
+        "subtitle_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsanquam."
+      }
+    },
+    "product_variants_fPxkRB": {
+      "type": "product-variants",
+      "blocks": {
+        "product_fcMVrx": {
+          "type": "product",
+          "settings": {
+            "selected_product": "the-health-project-ultimate-whey-protein",
+            "description_alignment": "start",
+            "button_color": "#42abde",
+            "button_text": "Buy now"
+          }
+        },
+        "product_EhCkep": {
+          "type": "product",
+          "settings": {
+            "selected_product": "the-health-project-ultimate-whey-protein",
+            "description_alignment": "start",
+            "button_color": "#42abde",
+            "button_text": "Buy now"
+          }
+        }
+      },
+      "block_order": [
+        "product_fcMVrx",
+        "product_EhCkep"
+      ],
+      "settings": {
+      }
+    },
+    "info_WJj8rf": {
+      "type": "info",
+      "blocks": {
+        "list_tem_ciYNrw": {
+          "type": "list-tem",
+          "settings": {
+            "image": "shopify://shop_images/list-image-1.jpg",
+            "large_list_title": "Protein",
+            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
+          }
+        },
+        "list_tem_b3CXHK": {
+          "type": "list-tem",
+          "settings": {
+            "image": "shopify://shop_images/list-image2.jpg",
+            "large_list_title": "Protein",
+            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
+          }
+        },
+        "list_tem_b6yfzj": {
+          "type": "list-tem",
+          "settings": {
+            "image": "shopify://shop_images/list-image3.png",
+            "large_list_title": "Protein",
+            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
+          }
+        }
+      },
+      "block_order": [
+        "list_tem_ciYNrw",
+        "list_tem_b3CXHK",
+        "list_tem_b6yfzj"
+      ],
+      "settings": {
+        "reverse_layout": false
+      }
+    },
+    "gallery_for_landing_FywPEr": {
+      "type": "gallery-for-landing",
+      "blocks": {
+        "image_pjbdWH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gallery-default-image.jpg"
+          }
+        },
+        "image_6MRzxF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gallery-image-2.jpg"
+          }
+        },
+        "image_tbyqUH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gallery-default-image.jpg"
+          }
+        },
+        "image_MMMhNg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gallery-image-2.jpg"
+          }
+        },
+        "image_zicMgi": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gallery-image-2.jpg"
+          }
+        },
+        "image_3dKmdB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gallery-default-image.jpg"
+          }
+        },
+        "image_Qdgzj4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gallery-image-2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_pjbdWH",
+        "image_6MRzxF",
+        "image_tbyqUH",
+        "image_MMMhNg",
+        "image_zicMgi",
+        "image_3dKmdB",
+        "image_Qdgzj4"
+      ],
+      "settings": {
+        "gallery_title": "Lorem ipsum dolor sit amet",
+        "gallery_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsanquam."
+      }
+    },
+    "testimonials_NFkfdL": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_GK6PgH": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Mark Toried",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+            "author_position": "Bodybuilder",
+            "avatar": "shopify://shop_images/avatar.jpg"
+          }
+        },
+        "testimonial_GGtB6j": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Mark Toried",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+            "author_position": "Bodybuilder",
+            "avatar": "shopify://shop_images/avatar.jpg"
+          }
+        },
+        "testimonial_xUFc6g": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Mark Toried",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+            "author_position": "Bodybuilder",
+            "avatar": "shopify://shop_images/avatar.jpg"
+          }
+        },
+        "testimonial_6MeVVk": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Mark Toried",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+            "author_position": "Bodybuilder",
+            "avatar": "shopify://shop_images/avatar.jpg"
+          }
+        },
+        "testimonial_bdVVNn": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Mark Toried",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+            "author_position": "Bodybuilder",
+            "avatar": "shopify://shop_images/avatar.jpg"
+          }
+        },
+        "testimonial_h7PpKJ": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Mark Toried",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+            "author_position": "Bodybuilder",
+            "avatar": "shopify://shop_images/avatar.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_GK6PgH",
+        "testimonial_GGtB6j",
+        "testimonial_xUFc6g",
+        "testimonial_6MeVVk",
+        "testimonial_bdVVNn",
+        "testimonial_h7PpKJ"
+      ],
+      "settings": {
+        "gallery_title": "What our customers think",
+        "gallery_subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam."
+      }
+    },
+    "faq_46AEPc": {
+      "type": "faq",
+      "blocks": {
+        "faq_item_Up3XN8": {
+          "type": "faq_item",
+          "settings": {
+            "accordeon_number": "01",
+            "accordeon_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices?",
+            "accordeon_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam."
+          }
+        },
+        "faq_item_wQ7XVR": {
+          "type": "faq_item",
+          "settings": {
+            "accordeon_number": "02",
+            "accordeon_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices?",
+            "accordeon_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam."
+          }
+        },
+        "faq_item_369iTJ": {
+          "type": "faq_item",
+          "settings": {
+            "accordeon_number": "03",
+            "accordeon_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices?",
+            "accordeon_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam."
+          }
+        },
+        "faq_item_pkqWfD": {
+          "type": "faq_item",
+          "settings": {
+            "accordeon_number": "04",
+            "accordeon_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices?",
+            "accordeon_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam."
+          }
+        },
+        "faq_item_FnPRXr": {
+          "type": "faq_item",
+          "settings": {
+            "accordeon_number": "05",
+            "accordeon_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices?",
+            "accordeon_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam."
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_Up3XN8",
+        "faq_item_wQ7XVR",
+        "faq_item_369iTJ",
+        "faq_item_pkqWfD",
+        "faq_item_FnPRXr"
+      ],
+      "settings": {
+      }
+    },
+    "magic_text_ydxcer": {
       "type": "magic-text",
       "blocks": {
-        "text_item_caNTa6": {
+        "text_item_GrNBRM": {
           "type": "text_item",
           "settings": {
             "magic_text_title": "DISCOVER THE HEALTH PROJECT AT DISCOUNT SUPPLEMENTS TODAY!",
@@ -29,25 +373,41 @@
             "magic_text_sub_text": ""
           }
         },
-        "text_item_bCQ3JN": {
+        "text_item_RCVnYC": {
           "type": "text_item",
           "settings": {
-            "magic_text_title": "DISCOVER THE HEALTH PROJECT AT DISCOUNT SUPPLEMENTS TODAY!",
-            "magic_text_main_text": "Find whey protein, mass gainers, health and wellness supplements and more in convenient capsules, pouches and bundles when you shop the range at Discount Supplements today! Or, to learn more about this great brand and its products, why not check out our blog?",
+            "magic_text_title": "THE HEALTH PROJECT",
+            "magic_text_main_text": "Find whey protein, mass gainers, health and wellness wide selection of supplements tailored to your health needs and fitness goals. Formerly Optimum Health, one of Discount Supplements' biggest sellers since 2010, you can find all the great products you'd expect from the brand in the same great flavours and formulas. So you can trust The Health Project to deliver the same gains and results that you've come to expect!",
             "magic_text_sub_text": "Each product within The Health Project brand features back-to-basics branding, making each product easier for both new and existing customers to understand. So, whether you're looking to add more whey or plant protein to your workouts or simply want to try out the brand with one of our supplement bundles, you'll find everything you need!"
           }
         }
       },
       "block_order": [
-        "text_item_caNTa6",
-        "text_item_bCQ3JN"
+        "text_item_GrNBRM",
+        "text_item_RCVnYC"
       ],
       "settings": {
+      }
+    },
+    "contact_us_idBfV4": {
+      "type": "contact-us",
+      "settings": {
+        "small_text": "Do you have any questions?",
+        "large_text": "Let's discuss them"
       }
     }
   },
   "order": [
     "main",
-    "magic_text_wcbMcV"
+    "hero_landing_pyzJrL",
+    "collections_slider_9H3nYx",
+    "top_sellers_NpbUJ4",
+    "product_variants_fPxkRB",
+    "info_WJj8rf",
+    "gallery_for_landing_FywPEr",
+    "testimonials_NFkfdL",
+    "faq_46AEPc",
+    "magic_text_ydxcer",
+    "contact_us_idBfV4"
   ]
 }

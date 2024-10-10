@@ -1,0 +1,103 @@
+{{ 'contact-us.css' | asset_url | stylesheet_tag }}
+
+<section class="contacts-container">
+  <div class="contact-section">
+    <div class="contact-section-text">
+      <p>{{ section.settings.small_text }}</p>
+      <a href="#" class="openModalBtn modal-link">{{ section.settings.large_text }}Let's discuss them <span></span></a>
+    </div>
+    <div class="contact-section-image">
+      <img src="{{ 'no-round.png' | asset_url }}" alt="" width="auto" height="auto">
+    </div>
+  </div>
+</section>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-content">
+    <span class="modal-close" id="modalCloseBtn">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.22705 5.22656L14.773 14.7725" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5.22705 14.7734L14.773 5.2275" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+    <div class="form-header">
+      <h2 class="form-header__heading padding-bottom-24">Contact us</h2>
+      <div class="form-header__notification padding-bottom-32"></div>
+    </div>
+    <div class="form-body">
+      <form action="">
+        <div class="field padding-bottom-32">
+          <label for=""></label>
+          <input class="input-large" name="name" id="" type="text" placeholder="Your name">
+        </div>
+        <div class="field padding-bottom-32">
+          <label for=""></label>
+          <input class="input-large" name="surname" id="" type="email" placeholder="Email">
+        </div>
+        <div class="">
+          <textarea class="input-error" placeholder="Message" cols="20" rows="6"></textarea>
+          <p class="form-body__error-message">* All fields must be filled in</p>
+        </div>
+        <div class="padding-bottom-8">
+          <button id="" class="button button-default button-wide button-blue" type="submit">Send message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  const openModalBtns = document.querySelectorAll('.openModalBtn');
+  const modalOverlay = document.getElementById('modalOverlay');
+  const modalContent = document.querySelector('.modal-content');
+  const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+  openModalBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      modalOverlay.style.opacity = '1';
+      modalOverlay.style.pointerEvents = 'auto';
+      modalContent.style.opacity = '1';
+      modalContent.style.transform = 'scale(1)';
+    });
+  });
+
+  modalCloseBtn.addEventListener('click', closeModal);
+
+  modalOverlay.addEventListener('click', (event) => {
+    if (event.target === modalOverlay) {
+      closeModal();
+    }
+  });
+
+  function closeModal() {
+    modalOverlay.style.opacity = '0';
+    modalOverlay.style.pointerEvents = 'none';
+    modalContent.style.opacity = '0';
+    modalContent.style.transform = 'scale(0.8)';
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Contact us",
+  "settings": [
+    {
+      "id": "small_text",
+      "type": "text",
+      "label": "Small text",
+      "default": "Do you have any questions?"
+    },
+    {
+      "id": "large_text",
+      "type": "text",
+      "label": "Large Text",
+      "default": "Let's discuss them"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact us"
+    }
+  ]
+}
+{% endschema %}

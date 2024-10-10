@@ -10,7 +10,7 @@
   }
 </style>
 
-<section class="product-variants container">
+<section class="product-variants container" id="product-variants">
   <div class="swiper-vertical">
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
@@ -70,46 +70,48 @@
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const isMobile = () => window.innerWidth < 1366;
+{% comment %} <script> {% endcomment %}
+{% comment %} document.addEventListener('DOMContentLoaded', function () { {% endcomment %}
+{% javascript %}
+  const isMobile = () => window.innerWidth < 1366;
 
-    const productsSwiper = new Swiper('.swiper-vertical', {
-      direction: isMobile() ? 'horizontal' : 'vertical',
-      spaceBetween: 8,
-      scrollbar: {
-        el: '.swiper-vertical-scrollbar',
+  const productsSwiper = new Swiper('.swiper-vertical', {
+    direction: isMobile() ? 'horizontal' : 'vertical',
+    spaceBetween: 8,
+    scrollbar: {
+      el: '.swiper-vertical-scrollbar',
+    },
+    navigation: {
+      prevEl: '.swiper-vertical-prev',
+      nextEl: '.swiper-vertical-next',
+    },
+    on: {
+      resize: () => {
+        productsSwiper.changeDirection(isMobile() ? 'horizontal' : 'vertical');
       },
-      navigation: {
-        prevEl: '.swiper-vertical-prev',
-        nextEl: '.swiper-vertical-next',
-      },
-      on: {
-        resize: () => {
-          productsSwiper.changeDirection(isMobile() ? 'horizontal' : 'vertical');
-        },
-      },
-    });
-
-    const variantsSwiper = new Swiper('.swiper-horizontal', {
-      direction: 'horizontal',
-      spaceBetween: 14,
-      slidesPerView: 1,
-      pagination: {
-        el: '.swiper-horizontal-pagination',
-        clickable: true,
-      },
-      on: {
-        touchStart: () => {
-          productsSwiper.allowTouchMove = false;
-        },
-        touchEnd: () => {
-          productsSwiper.allowTouchMove = true;
-        },
-      },
-    });
+    },
   });
-</script>
+
+  new Swiper('.swiper-horizontal', {
+    direction: 'horizontal',
+    spaceBetween: 14,
+    slidesPerView: 1,
+    pagination: {
+      el: '.swiper-horizontal-pagination',
+      clickable: true,
+    },
+    on: {
+      touchStart: () => {
+        productsSwiper.allowTouchMove = false;
+      },
+      touchEnd: () => {
+        productsSwiper.allowTouchMove = true;
+      },
+    },
+  });
+{% endjavascript %}
+{% comment %} }); {% endcomment %}
+{% comment %} </script> {% endcomment %}
 
 {% schema %}
 {

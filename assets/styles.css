@@ -132,7 +132,6 @@
 .header__logo {
   width: 200px;
   position: relative;
-  z-index: 10;
 }
 
 .header__button {
@@ -173,6 +172,11 @@
 
 .button-wide {
   width: 100%;
+}
+
+.button-blue {
+  background-color: var(--color-accent);
+  color: var(--color-white);
 }
 
 .button-default {

@@ -17,7 +17,9 @@
     <link href="{{ 'styles.css' | asset_url }}" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-    <script defer="defer" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    {% # theme-check-disable %}
+    {{ 'swiper-bundle.min.js' | asset_url | script_tag }}
+    {% comment %} <script defer="defer" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> {% endcomment %}
   </head>
   <body>
     {% section 'header-landing' %}

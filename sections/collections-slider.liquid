@@ -62,13 +62,11 @@
 </section>
 
 <script>
-  let swiper;
+  let swiperCollection;
 
   document.addEventListener('DOMContentLoaded', function () {
-    swiper = new Swiper('#collections-swiper', {
+    swiperCollection = new Swiper('#collections-swiper', {
       slidesPerView: 1,
-      observer: true,
-      observeParents: true,
       spaceBetween: 15,
       loop: true,
       navigation: {
@@ -109,8 +107,8 @@
 
     evt.currentTarget.classList.add('active');
 
-    if (swiper) {
-      swiper.update();
+    if (swiperCollection) {
+      swiperCollection.update();
     }
   }
 </script>
