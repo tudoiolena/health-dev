@@ -40,13 +40,8 @@
   padding-bottom: 10px;
   color: rgba(255, 255, 255, 1);
 }
-.contact-section-image {
-  /* width: 747px;
-  height: 600px; */
-}
+
 .contact-section-image img {
-  /* max-width: 748px;
-  height: auto; */
   border-radius: 70px;
 }
 
@@ -61,13 +56,9 @@
     padding-left: 63px;
   }
   .contact-section-image {
-    /* width: auto; */
     height: 456px;
   }
   .contact-section-image img {
-    /* width: auto;
-    height: 456px;
-    height: auto; */
     border-radius: 70px;
   }
 }
@@ -215,6 +206,7 @@ textarea {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  z-index: 11;
 }
 
 .modal-content {

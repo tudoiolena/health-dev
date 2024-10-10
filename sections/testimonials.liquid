@@ -1,6 +1,6 @@
 {{ 'testimonials.css' | asset_url | stylesheet_tag }}
 
-<section id="testimonials" class="testimonials container margin-bottom-20">
+<section id="testimonials" class="testimonials container-1920 margin-bottom-20">
   <div class="gallery-text-content">
     <h2>{{ section.settings.gallery_title }}</h2>
     <p>{{ section.settings.gallery_subtitle }}</p>
@@ -42,10 +42,10 @@
 
   <div class="arrow-container">
     <div class="testimonials-arrow-left">
-      <img src="{{ 'icon-arrow-left.svg' | asset_url }}" alt="Previous" width="auto" height="auto">
+      <img src="{{ 'arrow-left-small.png' | asset_url }}" alt="Previous" width="auto" height="auto">
     </div>
     <div class="testimonials-arrow-right">
-      <img src="{{ 'icon-arrow-right.svg' | asset_url }}" alt="Next" width="auto" height="auto">
+      <img src="{{ 'arrow-right-small.png' | asset_url }}" alt="Next" width="auto" height="auto">
     </div>
   </div>
 </section>
@@ -56,6 +56,7 @@
       slidesPerView: 1,
       spaceBetween: 10,
       loop: true,
+      grabCursor: true,
       navigation: {
         nextEl: '.testimonials-arrow-right',
         prevEl: '.testimonials-arrow-left',
@@ -67,10 +68,7 @@
         768: {
           slidesPerView: 2,
         },
-        1366: {
-          slidesPerView: 3,
-        },
-        1920: {
+        1336: {
           slidesPerView: 4,
         },
       },

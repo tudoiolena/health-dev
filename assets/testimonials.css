@@ -1,12 +1,11 @@
 .testimonials-swiper {
   overflow: hidden;
-  max-width: 1410px;
-  margin: 0 auto 20px 0;
+  margin-bottom: 20px;
 }
 
 .testimonials--item {
   max-width: 450px;
-  background-color: #f8f8f8;
+  background-color: var(--color-light-grey);
   padding: 1rem;
   border-radius: 10px;
 }
@@ -68,6 +67,8 @@
 .testimonials-arrow-right,
 .testimonials-arrow-left {
   cursor: pointer;
+  width: 50px;
+  height: 50px;
 }
 
 .gallery-text-content {

@@ -4,7 +4,10 @@
   <div class="contact-section">
     <div class="contact-section-text">
       <p>{{ section.settings.small_text }}</p>
-      <a href="#" class="openModalBtn modal-link">{{ section.settings.large_text }}Let's discuss them <span></span></a>
+      <a href="#" class="openModalBtn modal-link">
+        {{- section.settings.large_text -}}
+        <span></span
+      ></a>
     </div>
     <div class="contact-section-image">
       <img src="{{ 'no-round.png' | asset_url }}" alt="" width="auto" height="auto">

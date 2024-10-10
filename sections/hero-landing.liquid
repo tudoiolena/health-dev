@@ -1,6 +1,6 @@
 {{ 'hero-landing.css' | asset_url | stylesheet_tag }}
 
-<section class="hero-slider-{{ section.id }}">
+<section class="hero-slider-{{ section.id }} hero-section container-1920">
   <div class="swiper-container-hero">
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
@@ -63,10 +63,10 @@
         nextEl: '.arrow-right-hero',
         prevEl: '.arrow-left-hero',
       },
-      autoplay: {
+      {% comment %} autoplay: {
         delay: 5000,
         disableOnInteraction: false,
-      },
+      }, {% endcomment %}
       on: {
         autoplayTimeLeft(s, time, progress) {
           progressCircle.style.setProperty('--progress', 1 - progress);
