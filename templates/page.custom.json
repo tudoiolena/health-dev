@@ -18,46 +18,88 @@
         "padding_bottom": 28
       }
     },
-    "info_tpE3B3": {
-      "type": "info",
+    "testimonials_CN68Ck": {
+      "type": "testimonials",
       "blocks": {
-        "list_tem_wDkxUf": {
-          "type": "list-tem",
+        "testimonial_zikfeL": {
+          "type": "testimonial",
           "settings": {
-            "image": "shopify://shop_images/list-image-1.jpg",
-            "large_list_title": "Protein",
-            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
+            "author_name": "Mark Toried",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+            "author_position": "Bodybuilder",
+            "avatar": "shopify://shop_images/avatar.jpg"
           }
         },
-        "list_tem_UwpaUn": {
-          "type": "list-tem",
+        "testimonial_YKUXKw": {
+          "type": "testimonial",
           "settings": {
-            "image": "shopify://shop_images/list-image2.jpg",
-            "large_list_title": "Plant Protein",
-            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
+            "author_name": "Mark Toried",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+            "author_position": "Bodybuilder",
+            "avatar": "shopify://shop_images/avatar.jpg"
           }
         },
-        "list_tem_QrmgCJ": {
-          "type": "list-tem",
+        "testimonial_MxbQrm": {
+          "type": "testimonial",
           "settings": {
-            "image": "shopify://shop_images/list-image3.png",
-            "large_list_title": "Whey Protein",
-            "large_list_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officia quae repudiandae reiciendis porro officiisnobis, assumenda, a repellendus consequuntur earum maiores quisquam ipsam quam iste saepe ea, ratione libero."
+            "author_name": "Mark Toried",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+            "author_position": "Bodybuilder",
+            "avatar": "shopify://shop_images/avatar.jpg"
+          }
+        },
+        "testimonial_PM3q97": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Mark Toried",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+            "author_position": "Bodybuilder",
+            "avatar": "shopify://shop_images/avatar.jpg"
+          }
+        },
+        "testimonial_33FG3g": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Mark Toried",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+            "author_position": "Bodybuilder",
+            "avatar": "shopify://shop_images/avatar.jpg"
+          }
+        },
+        "testimonial_GwAdHT": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Mark Toried",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+            "author_position": "Bodybuilder",
+            "avatar": "shopify://shop_images/avatar.jpg"
+          }
+        },
+        "testimonial_8UBLYr": {
+          "type": "testimonial",
+          "settings": {
+            "author_name": "Mark Toried",
+            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
+            "author_position": "Bodybuilder",
+            "avatar": "shopify://shop_images/avatar.jpg"
           }
         }
       },
       "block_order": [
-        "list_tem_wDkxUf",
-        "list_tem_UwpaUn",
-        "list_tem_QrmgCJ"
+        "testimonial_zikfeL",
+        "testimonial_YKUXKw",
+        "testimonial_MxbQrm",
+        "testimonial_PM3q97",
+        "testimonial_33FG3g",
+        "testimonial_GwAdHT",
+        "testimonial_8UBLYr"
       ],
       "settings": {
-        "reverse_layout": false
       }
     }
   },
   "order": [
     "main",
-    "info_tpE3B3"
+    "testimonials_CN68Ck"
   ]
 }
