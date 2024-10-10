@@ -18,81 +18,47 @@
         "padding_bottom": 28
       }
     },
-    "testimonials_CN68Ck": {
-      "type": "testimonials",
+    "faq_EgT9k9": {
+      "type": "faq",
       "blocks": {
-        "testimonial_zikfeL": {
-          "type": "testimonial",
+        "faq_item_gBzWTU": {
+          "type": "faq_item",
           "settings": {
-            "author_name": "Mark Toried",
-            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
-            "author_position": "Bodybuilder",
-            "avatar": "shopify://shop_images/avatar.jpg"
+            "accordeon_number": "01",
+            "accordeon_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices?",
+            "accordeon_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam."
           }
         },
-        "testimonial_YKUXKw": {
-          "type": "testimonial",
+        "faq_item_Wgkri8": {
+          "type": "faq_item",
           "settings": {
-            "author_name": "Mark Toried",
-            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
-            "author_position": "Bodybuilder",
-            "avatar": "shopify://shop_images/avatar.jpg"
+            "accordeon_number": "02",
+            "accordeon_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices?",
+            "accordeon_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam."
           }
         },
-        "testimonial_MxbQrm": {
-          "type": "testimonial",
+        "faq_item_4Ex4ki": {
+          "type": "faq_item",
           "settings": {
-            "author_name": "Mark Toried",
-            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
-            "author_position": "Bodybuilder",
-            "avatar": "shopify://shop_images/avatar.jpg"
+            "accordeon_number": "03",
+            "accordeon_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices?",
+            "accordeon_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam."
           }
         },
-        "testimonial_PM3q97": {
-          "type": "testimonial",
+        "faq_item_fGyn7T": {
+          "type": "faq_item",
           "settings": {
-            "author_name": "Mark Toried",
-            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
-            "author_position": "Bodybuilder",
-            "avatar": "shopify://shop_images/avatar.jpg"
-          }
-        },
-        "testimonial_33FG3g": {
-          "type": "testimonial",
-          "settings": {
-            "author_name": "Mark Toried",
-            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
-            "author_position": "Bodybuilder",
-            "avatar": "shopify://shop_images/avatar.jpg"
-          }
-        },
-        "testimonial_GwAdHT": {
-          "type": "testimonial",
-          "settings": {
-            "author_name": "Mark Toried",
-            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
-            "author_position": "Bodybuilder",
-            "avatar": "shopify://shop_images/avatar.jpg"
-          }
-        },
-        "testimonial_8UBLYr": {
-          "type": "testimonial",
-          "settings": {
-            "author_name": "Mark Toried",
-            "testimonial": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.",
-            "author_position": "Bodybuilder",
-            "avatar": "shopify://shop_images/avatar.jpg"
+            "accordeon_number": "04",
+            "accordeon_question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices?",
+            "accordeon_answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur a nunc ultrices, feugiat augue vitae, accumsan quam."
           }
         }
       },
       "block_order": [
-        "testimonial_zikfeL",
-        "testimonial_YKUXKw",
-        "testimonial_MxbQrm",
-        "testimonial_PM3q97",
-        "testimonial_33FG3g",
-        "testimonial_GwAdHT",
-        "testimonial_8UBLYr"
+        "faq_item_gBzWTU",
+        "faq_item_Wgkri8",
+        "faq_item_4Ex4ki",
+        "faq_item_fGyn7T"
       ],
       "settings": {
       }
@@ -100,6 +66,6 @@
   },
   "order": [
     "main",
-    "testimonials_CN68Ck"
+    "faq_EgT9k9"
   ]
 }
