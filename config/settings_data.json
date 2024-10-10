@@ -138,6 +138,50 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "header-landing": {
+        "type": "header-landing",
+        "settings": {
+          "logo_alt_text": "Logo Alt Text",
+          "button_text": "Visit market",
+          "button_link": "/"
+        }
+      },
+      "footer-landing": {
+        "type": "footer-landing",
+        "blocks": {
+          "social_link_FwTeKL": {
+            "type": "social_link",
+            "settings": {
+              "social_title": "Gmail",
+              "social_email_link": "/",
+              "social_email_address": "example.lorem@gmail.com"
+            }
+          },
+          "social_link_MqJDeT": {
+            "type": "social_link",
+            "settings": {
+              "social_title": "Gmail",
+              "social_email_link": "/",
+              "social_email_address": "example.lorem@gmail.com"
+            }
+          },
+          "social_link_xgqpii": {
+            "type": "social_link",
+            "settings": {
+              "social_title": "Gmail",
+              "social_email_link": "/",
+              "social_email_address": "example.lorem@gmail.com"
+            }
+          }
+        },
+        "block_order": [
+          "social_link_FwTeKL",
+          "social_link_MqJDeT",
+          "social_link_xgqpii"
+        ],
+        "settings": {
+        }
       }
     },
     "content_for_index": [

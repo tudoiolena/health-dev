@@ -1,0 +1,87 @@
+<footer>
+  <section class="footer container margin-bottom-20">
+    <a href="#" class="footer__logo">
+      <img src="{{ 'logo.png' | asset_url  }}" alt="THP" width="auto" height="auto">
+    </a>
+    <nav class="header__nav">
+      <ul>
+        {% for block in section.blocks %}
+          <li class="header__nav-item">
+            <a href="{{ block.settings.menu_item_link }}">{{ block.settings.menu_item_text }}</a>
+          </li>
+        {% endfor %}
+        <li class="header__nav-item"><a href="/">Catalog</a></li>
+        <li class="header__nav-item"><a href="#">Categories</a></li>
+        <li class="header__nav-item"><a href="#">About</a></li>
+        <li class="header__nav-item"><a href="#">Reviews</a></li>
+        <li class="header__nav-item"><a href="#">FAQ</a></li>
+        <li class="header__nav-item"><a href="#">Contact us</a></li>
+      </ul>
+    </nav>
+  </section>
+  <section class="container">
+    <div class="social-grid">
+      {% for block in section.blocks %}
+        <div class="social-grid-item">
+          <div class="social-title">{{ block.settings.social_title }}</div>
+          <a class="social-link" href="{{ block.settings.social_email_link }}">
+            {{ block.settings.social_email_address }}
+            <span class="arrow-icon-45 align-center">
+              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.28467 15.2837L15.2847 1.28369M15.2847 1.28369L5.95133 1.28369M15.2847 1.28369L15.2847 10.617" stroke="#42ABDE" stroke-width="1.5"/>
+              </svg>
+            </span>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</footer>
+
+{% schema %}
+{
+  "name": "Social Grid",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "social_link",
+      "name": "Social Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "social_title",
+          "label": "Social Title",
+          "default": "Gmail"
+        },
+        {
+          "type": "url",
+          "id": "social_email_link",
+          "label": "Email Link",
+          "default": "/"
+        },
+        {
+          "type": "text",
+          "id": "social_email_address",
+          "label": "Email Address",
+          "default": "example.lorem@gmail.com"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Social Grid",
+      "blocks": [
+        {
+          "type": "social_link",
+          "settings": {
+            "social_title": "Gmail",
+            "social_email_link": "/",
+            "social_email_address": "example.lorem@gmail.com"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
